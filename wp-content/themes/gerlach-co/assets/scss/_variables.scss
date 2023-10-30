@@ -1,0 +1,70 @@
+//
+// Global Variables
+//
+
+// ** COLORS listed here are just for reference.
+// ** these are now using the CSS variables which
+// ** you will see the var name to the right
+
+
+// primary colors
+$red: #BF2026;			// --brand_color-red
+$dark: #303030;			// --brand_color-dark
+$white: #fff;			// --brand_color-white
+$tan: #FAF3E3;			// --brand_color-tan
+$brown: #513F35;		// --brand_color-brown
+
+// secondary colors
+$maroon: #590F11;		// --brand_color-maroon
+$light: #F1F1F1;		// --brand_color-light
+$gray: #C5C7C9;			// --brand_color-gray
+$slate: #727A8F;		// --brand_color-slate
+$teal: #00ADAA;			// --brand_color-teal
+
+// interface colors and shades
+
+$black: #000;			// --brand_color-black
+$darker: #2a2a2a;		// --brand_color-darker
+$mediumgray: #737575;	// --brand_color-mediumgray
+$silver: #D8D6D7;		// --brand_color-silver
+
+//
+// 01. Grid & Layout
+// 02. Breakpoints
+// 03. Decorative & Animation
+
+// ---------------- 01. Grid & Layout
+
+$gutter-width:   30px;   // used in sections
+$sticky-footer:  true;   // change to "false" to remove and footer will just follow the content size.
+$golden-large:	63.8%;
+$max-text-line-width: 850px;
+
+
+// ---------------- 02. Breakpoints
+// (concept borrowed from http://tapps.us/breakpoint-article )
+
+// Define breakpoints
+$breakpoint-small: 600px;
+$breakpoint-medium: 900px;
+$breakpoint-large: 1200px;
+$breakpoint-x-large: 1800px;
+
+// Breakpoint groupings by devices (used by the mixins in _utilities)
+$phone:                max-width $breakpoint-small;
+$phone-landscape:      ($breakpoint-small $breakpoint-medium) (orientation landscape);
+$tablet:               $breakpoint-small $breakpoint-large;
+$tablet-landscape:     ($breakpoint-medium $breakpoint-large) (orientation landscape);
+$tablet-portrait:      ($breakpoint-small $breakpoint-medium) (orientation portrait);
+$desktop:              $breakpoint-large;
+$large-desktop:        $breakpoint-x-large;
+
+$tablet-portrait-down: max-width $breakpoint-medium;
+$tablet-landscape-up:  $breakpoint-medium;
+
+
+// ---------------- 03. Decorative & Animation
+
+$border-radius: 			3em;
+$button-transition-speed: 	200ms;
+$default-button-padding:	1.25rem 4rem;

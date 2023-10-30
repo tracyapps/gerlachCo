@@ -1,0 +1,15 @@
+aside.aside_section {
+	padding: 2em;
+	background: var( --brand_color-white );
+	box-shadow: 1px 1px 18px rgba( 0, 0, 0, 0.24 );
+	margin-top: 1em;
+	margin-left: 1em;
+
+	&:first-of-type {
+		margin-top: 0;
+	}
+
+	h3 {
+		margin-top: 0;
+	}
+}

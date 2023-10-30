@@ -1,0 +1,54 @@
+//
+// Grid
+//
+// What you will find here:
+// 01. Basic grid elements
+
+
+// ---------------- 01. Basic grid elements
+
+.container {
+
+
+	p {
+
+	}
+}
+
+@include tablet-up {
+	.main-two-columns {
+		display: flex;
+		justify-content: space-between;
+		width: 95%;
+		margin: 0 auto;
+		max-width: 1230px;
+
+		.main-column {
+			width: $golden-large;
+			padding-right: $gutter-width;
+			padding-top: 2rem;
+		}
+		.secondary-column {
+			width: ( 100% - $golden-large );
+			padding-left: $gutter-width;
+			padding-top: 3rem;
+		}
+	}
+}
+
+@include tablet-portrait  {
+	.wp-block-columns {
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	.wp-block-column[style*=flex-basis].block-on-tablet-down {
+		width: 100%;
+		flex: 1;
+		flex-grow: 1;
+
+		+ .wp-block-column[style*=flex-basis] {
+			width: 100%;
+			flex-basis: 100% !important;
+		}
+	}
+}

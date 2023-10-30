@@ -1,0 +1,30 @@
+{
+  "name": "start-theme",
+  "version": "4.0.0",
+  "description": "A WordPress starter theme by tracy apps design, LLC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tracyapps/start.git"
+  },
+  "author": "Tracy Apps",
+  "license": "GPL-2.0 AND MIT",
+  "homepage": "https://github.com/tapps/start",
+  "scripts": {
+    "start": "gulp watch"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.63.6",
+    "scut": "^1.4.0"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}

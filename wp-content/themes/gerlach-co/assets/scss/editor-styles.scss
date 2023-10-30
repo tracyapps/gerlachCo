@@ -1,0 +1,37 @@
+@import "variables";
+
+body .has-red-to-maroon-gradient-background {
+	background-image: linear-gradient( 135deg, $red 75%,  $maroon 100% );
+}
+
+body .has-maroon-to-dark-gradient-background {
+	background-image: linear-gradient( 135deg, $maroon 75%, $dark 100% );
+}
+
+body .has-brown-to-dark-gradient-background {
+	background-image: linear-gradient( 135deg, $brown 75%, $dark 100% );
+}
+
+body .has-slate-to-dark-gradient-background {
+	background-image: linear-gradient( 135deg, $slate 75%, $dark 100% );
+}
+
+body .has-tan-to-white-gradient-background {
+	background-image: linear-gradient( 135deg, $tan 75%, $white 100% );
+}
+
+body .has-gray-to-light-gradient-background {
+	background-image: linear-gradient( 135deg, $gray 75%, $light 100% );
+}
+
+body .has-light-to-white-gradient-background {
+	background-image: linear-gradient( 135deg, $light 75%, $white 100% );
+}
+
+body .has-teal-to-tan-gradient-background {
+	background-image: linear-gradient( 135deg, $teal 75%, $tan 100% );
+}
+
+body .has-tan-to-slate-gradient-background {
+	background-image: linear-gradient( 135deg, $tan 75%, $slate 100% );
+}

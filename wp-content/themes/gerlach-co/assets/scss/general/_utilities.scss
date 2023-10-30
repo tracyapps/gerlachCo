@@ -1,0 +1,253 @@
+//
+// Utilities
+//
+// What you will find here:
+// 01. General-use classes & Accessibility
+// 02. Mixins
+//	-- Style mixins
+//	-- Responsive mixins
+//	-- Gradients
+// 03. Keyframes
+// 04. Custom Block Color Themes
+
+// ---------------- 01. General-use classes & Accessibility
+
+.assistive-text,
+.visuallyhidden,
+.screen-reader-text {
+	position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
+.cover-button {
+	display: flex;
+	flex-direction: column;
+	.wp-block-cover__inner-container {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+
+		h2 {
+			flex: 1;
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			display: flex;
+
+			a {
+				flex: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border:1px solid transparent;
+
+				&:hover,
+				&:focus,
+				&:target {
+					background: rgba( 0, 0, 0, 0.4 );
+					border: 1px solid #fff;
+				}
+			}
+		}
+	}
+}
+
+// ---------------- 02. Mixins
+// Style mixins
+
+// Responsive mixins
+// using breakpoint, but helping readability
+
+@mixin phone-only {
+	@include breakpoint($phone) {
+		@content;
+	}
+}
+
+@mixin tablet-only {
+	@include breakpoint($tablet) {
+		@content;
+	}
+}
+
+@mixin tablet-portrait {
+	@include breakpoint($tablet-portrait) {
+		@content;
+	}
+}
+
+@mixin tablet-landscape {
+	@include breakpoint($tablet-landscape) {
+		@content;
+	}
+}
+
+@mixin desktop-only {
+	@include breakpoint($desktop) {
+		@content;
+	}
+}
+
+@mixin large-desktop {
+	@include breakpoint($large-desktop) {
+		@content;
+	}
+}
+
+@mixin tablet-down {
+	@include breakpoint($tablet-portrait-down) {
+		@content;
+	}
+}
+
+@mixin tablet-up {
+	@include breakpoint($tablet-landscape-up) {
+		@content;
+	}
+}
+
+@mixin phone-landscape {
+	@include breakpoint($phone-landscape) {
+		@content;
+	}
+}
+
+
+
+// ---------------- 03. Functions
+
+@function hexToRGB($hex) {
+	@return red($hex), green($hex), blue($hex);
+}
+
+// ---------------- 04. Custom Block Color Themes
+
+
+.has-red-color {
+	color: var( --brand_color-red );
+}
+.has-red-background-color {
+	background-color: var( --brand_color-red );
+}
+.has-dark-color {
+	color: var( --brand_color-dark );
+}
+.has-dark-background-color {
+	background-color: var( --brand_color-dark );
+}
+.has-white-color {
+	color: var( --brand_color-white );
+}
+.has-white-background-color {
+	background-color: var( --brand_color-white );
+}
+.has-tan-color {
+	color: var( --brand_color-tan );
+}
+.has-tan-background-color {
+	background-color: var( --brand_color-tan );
+}
+.has-brown-color {
+	color: var( --brand_color-brown );
+}
+.has-brown-background-color {
+	background-color: var( --brand_color-brown );
+}
+.has-maroon-color {
+	color: var( --brand_color-maroon );
+}
+.has-maroon-background-color {
+	background-color: var( --brand_color-maroon );
+}
+.has-light-color {
+	color: var( --brand_color-light );
+}
+.has-light-background-color {
+	background-color: var( --brand_color-light );
+}
+.has-gray-color {
+	color: var( --brand_color-gray );
+}
+.has-gray-background-color {
+	background-color: var( --brand_color-gray );
+}
+.has-slate-color {
+	color: var( --brand_color-slate );
+}
+.has-slate-background-color {
+	background-color: var( --brand_color-slate );
+}
+.has-teal-color {
+	color: var( --brand_color-teal );
+}
+.has-teal-background-color {
+	background-color: var( --brand_color-teal );
+}
+.has-black-color {
+	color: var( --brand_color-black );
+}
+.has-black-background-color {
+	background-color: var( --brand_color-black );
+}
+.has-darker-color {
+	color: var( --brand_color-darker );
+}
+.has-darker-background-color {
+	background-color: var( --brand_color-darker );
+}
+.has-mediumgray-color {
+	color: var( --brand_color-mediumgray );
+}
+.has-mediumgray-background-color {
+	background-color: var( --brand_color-mediumgray );
+}
+.has-silver-color {
+	color: var( --brand_color-silver );
+}
+.has-silver-background-color {
+	background-color: var( --brand_color-silver );
+}
+
+
+// gradients
+
+.has-red-to-maroon-gradient-background {
+	background-image: linear-gradient( 135deg, var( --brand_color-red ) 75%, var( --brand_color-maroon ) 100% );
+}
+
+.has-maroon-to-dark-gradient-background {
+	background-image: linear-gradient( 135deg, var( --brand_color-maroon ) 75%, var( --brand_color-dark ) 100% );
+}
+
+.has-brown-to-dark-gradient-background {
+	background-image: linear-gradient( 135deg, var( --brand_color-brown ) 75%, var( --brand_color-dark ) 100% );
+}
+
+.has-slate-to-dark-gradient-background {
+	background-image: linear-gradient( 135deg, var( --brand_color-slate ) 75%, var( --brand_color-dark ) 100% );
+}
+
+.has-tan-to-white-gradient-background {
+	background-image: linear-gradient( 135deg, var( --brand_color-tan ) 75%, var( --brand_color-white ) 100% );
+}
+
+.has-gray-to-light-gradient-background {
+	background-image: linear-gradient( 135deg, var( --brand_color-gray ) 75%, var( --brand_color-light ) 100% );
+}
+
+.has-light-to-white-gradient-background {
+	background-image: linear-gradient( 135deg, var( --brand_color-light ) 75%, var( --brand_color-white ) 100% );
+}
+
+.has-teal-to-tan-gradient-background {
+	background-image: linear-gradient( 135deg, var( --brand_color-teal ) 75%, var( --brand_color-tan ) 100% );
+}
+
+.has-tan-to-slate-gradient-background {
+	background-image: linear-gradient( 135deg, var( --brand_color-tan ) 75%, var( --brand_color-slate ) 100% );
+}

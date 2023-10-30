@@ -1,0 +1,25 @@
+#main {
+	width: 100%;
+}
+
+.site-content {
+	min-height: 200vh;
+
+	section.entry-content {
+		> div:first-of-type {
+	//		padding-top: 300px;
+		}
+	}
+}
+
+#inner-content {
+	display: flex;
+
+	> * {
+		flex: 1;
+	}
+
+	> .main-column {
+		min-width: $golden-large;
+	}
+}
