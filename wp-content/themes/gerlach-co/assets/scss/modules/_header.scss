@@ -1,6 +1,7 @@
 
 #full_page_sticky_container {
 	position: relative;
+
 }
 
 .site-header {
@@ -8,6 +9,7 @@
 	top: 0;
 	max-width: 100vw;
 	z-index: 999999;
+
 
 	.site-header-content-container {
 		display: flex;
@@ -19,14 +21,17 @@
 		transition: all $button-transition-speed ease-in-out;
 		background: var(--header--background_color);
 		color: var(--header--nav_text_color);
+		box-shadow: 0 7px 0 7px  color-mix(in srgb, var(--brand_color-maroon), transparent 21%);
 
 		@include phone-only {
 			padding: 2px 1rem;
+			box-shadow: 0 4px 0 4px  color-mix(in srgb, var(--brand_color-maroon), transparent 21%);
 		}
 	}
 	&.smaller .site-header-content-container {
 		background-color: var(--smaller_header--background_color);
 		color: var(--smaller_header--nav_text_color);
+		box-shadow: 0 4px 0 4px color-mix(in srgb, var(--brand_color-maroon), transparent 21%);;
 	}
 
 
@@ -79,18 +84,25 @@
 		}
 
 		#GERLACH__COMPANIES__INC--logo {
-			margin: -40px 0 -45px 0;
+			margin: -35px 0 -36px -30px;
+
+			@include phone-only {
+				margin: -40px -20px -30px -20px;
+			}
 
 			#FRED__GREYSCALE {
 				image {
-					transform: scale( .5 ) translateX( 123% ) translateY( 60% );
+					transform: scale( .52 ) translateX( 123% ) translateY( 60% );
 				}
 			}
 		}
 	}
 
 	#GERLACH__COMPANIES__INC--logo {
-		margin: 0 0 -30px -50px;
+		margin: 0 0 -24px -50px;
+		@include phone-only {
+			margin: 0 0 -15px -25px;
+		}
 
 		.main_text_color {
 			fill: currentColor;
@@ -100,7 +112,7 @@
 		}
 
 		#logomark__image {
-			margin: -30px 0;
+			margin: -25px 0;
 		}
 		#FRED__GREYSCALE {
 			position: relative;
@@ -113,6 +125,11 @@
 
 	}
 
+	&.smaller {
+		.main-navigation {
+			margin-top: 0;
+		}
+	}
 	.main-navigation {
 		text-align: center;
 		position: relative;
@@ -121,6 +138,12 @@
 		display: flex;
 		line-height: 1;
 		align-items: baseline;
+		font-weight: 600;
+		text-transform: uppercase;
+
+		@include tablet-up {
+			margin-top: 8em;
+		}
 
 		button {
 			align-self: stretch;

@@ -13,6 +13,7 @@
 		--brand_color-brown: #513F35;
 
 		--brand_color-maroon: #590F11;
+			--semi_transparent-maroon: rgba( var( --brand_color-maroon ), 0.5 );
 		--brand_color-light: #F1F1F1;
 		--brand_color-gray: #C5C7C9;
 		--brand_color-slate: #727A8F;
@@ -29,17 +30,17 @@
 		--body--link_color:			var( --brand_color-red );
 		--body--link_color_hover: 	var( --brand_color-maroon );
 
-		--header--background_color: 	transparent;
+		--header--background_color: 	var( --brand_color-red );
 		--header_dark--background_color: var( --brand_color-dark );
 		--header--nav_text_color:		var( --brand_color-white );
 
-		--smaller_header--background_color: var( --brand_color-darker );
+		--smaller_header--background_color: var( --brand_color-red  );
 		--smaller_header--nav_text_color: var( --brand_color-white );
 
 		--nav_item--background_color: 	transparent;
 		--nav_item--text_color: 		currentColor;
 
-		--nav_item_hover--background_color: var( --brand_color-red );
+		--nav_item_hover--background_color: var( --brand_color-maroon );
 		--nav_item_hover--text_color: 	var( --brand_color-white );
 
 		--page_header--page_title: 		var( --brand_color-white );

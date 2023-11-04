@@ -257,7 +257,7 @@
 
 			</div>
 			<div class="main-navigation">
-				<?php start_top_nav(); ?>
+				<?php start_top_nav_no_home(); ?>
 			</div>
 		</div> <!-- /.site-header-content-container -->
 	</header> <!-- / .site-header -->

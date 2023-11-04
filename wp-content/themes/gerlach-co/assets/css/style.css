@@ -655,15 +655,18 @@ input[aria-invalid=true] {
   transition: all 200ms ease-in-out;
   background: var(--header--background_color);
   color: var(--header--nav_text_color);
+  box-shadow: 0 7px 0 7px color-mix(in srgb, var(--brand_color-maroon), transparent 21%);
 }
 @media (max-width: 600px) {
   .site-header .site-header-content-container {
     padding: 2px 1rem;
+    box-shadow: 0 4px 0 4px color-mix(in srgb, var(--brand_color-maroon), transparent 21%);
   }
 }
 .site-header.smaller .site-header-content-container {
   background-color: var(--smaller_header--background_color);
   color: var(--smaller_header--nav_text_color);
+  box-shadow: 0 4px 0 4px color-mix(in srgb, var(--brand_color-maroon), transparent 21%);
 }
 .site-header .site-logo {
   color: var(--header--nav_text_color);
@@ -704,13 +707,23 @@ input[aria-invalid=true] {
   fill: var(--smaller_header--nav_text_color);
 }
 .site-header.smaller .site-logo #GERLACH__COMPANIES__INC--logo {
-  margin: -40px 0 -45px 0;
+  margin: -35px 0 -36px -30px;
+}
+@media (max-width: 600px) {
+  .site-header.smaller .site-logo #GERLACH__COMPANIES__INC--logo {
+    margin: -40px -20px -30px -20px;
+  }
 }
 .site-header.smaller .site-logo #GERLACH__COMPANIES__INC--logo #FRED__GREYSCALE image {
-  transform: scale(0.5) translateX(123%) translateY(60%);
+  transform: scale(0.52) translateX(123%) translateY(60%);
 }
 .site-header #GERLACH__COMPANIES__INC--logo {
-  margin: 0 0 -30px -50px;
+  margin: 0 0 -24px -50px;
+}
+@media (max-width: 600px) {
+  .site-header #GERLACH__COMPANIES__INC--logo {
+    margin: 0 0 -15px -25px;
+  }
 }
 .site-header #GERLACH__COMPANIES__INC--logo .main_text_color {
   fill: currentColor;
@@ -719,13 +732,16 @@ input[aria-invalid=true] {
   fill: #737575;
 }
 .site-header #GERLACH__COMPANIES__INC--logo #logomark__image {
-  margin: -30px 0;
+  margin: -25px 0;
 }
 .site-header #GERLACH__COMPANIES__INC--logo #FRED__GREYSCALE {
   position: relative;
 }
 .site-header #GERLACH__COMPANIES__INC--logo #FRED__GREYSCALE image {
   transform: scale(1) translateX(62%) translateY(0%);
+}
+.site-header.smaller .main-navigation {
+  margin-top: 0;
 }
 .site-header .main-navigation {
   text-align: center;
@@ -735,6 +751,13 @@ input[aria-invalid=true] {
   display: flex;
   line-height: 1;
   align-items: baseline;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+@media (min-width: 900px) {
+  .site-header .main-navigation {
+    margin-top: 8em;
+  }
 }
 .site-header .main-navigation button {
   align-self: stretch;
