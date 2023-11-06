@@ -313,7 +313,7 @@ if( !is_front_page() && !is_archive() ) :
 	else : // or if there is no featured image then this happens
 		printf(
 			'
-				<div class="page_heading_area">
+				<div class="page_heading_area no-featured-image">
 					<h1 class="page_title">%s</h1>
 					%s
 				</div>

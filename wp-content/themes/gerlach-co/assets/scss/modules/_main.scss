@@ -3,7 +3,7 @@
 }
 
 .site-content {
-	min-height: 200vh;
+	min-height: 100vh;
 
 	section.entry-content {
 		> div:first-of-type {
@@ -21,5 +21,9 @@
 
 	> .main-column {
 		min-width: $golden-large;
+	}
+
+	> .secondary-column {
+	//	background: var( --brand_color-white );
 	}
 }

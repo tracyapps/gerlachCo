@@ -1,0 +1,410 @@
+[
+  {
+	"key": "group_653f7bcd887f7",
+	"title": "Auction Details",
+	"fields": [
+	  {
+		"key": "field_653f7fc42c6b4",
+		"label": "Dates",
+		"name": "",
+		"aria-label": "",
+		"type": "tab",
+		"instructions": "",
+		"required": 0,
+		"conditional_logic": 0,
+		"wrapper": {
+		  "width": "",
+		  "class": "",
+		  "id": ""
+		},
+		"placement": "top",
+		"endpoint": 1,
+		"no_preference": 0
+	  },
+	  {
+		"key": "field_653f7bce0a221",
+		"label": "Auction Ends",
+		"name": "auction_ends",
+		"aria-label": "",
+		"type": "date_picker",
+		"instructions": "",
+		"required": 0,
+		"conditional_logic": 0,
+		"wrapper": {
+		  "width": "50",
+		  "class": "",
+		  "id": ""
+		},
+		"display_format": "F j, Y",
+		"return_format": "F j, Y",
+		"first_day": 0,
+		"placeholder": "",
+		"min_date": "",
+		"max_date": "",
+		"no_weekends": 0
+	  },
+	  {
+		"key": "field_653f7ee60a228",
+		"label": "Starting at",
+		"name": "starting_at",
+		"aria-label": "",
+		"type": "text",
+		"instructions": "",
+		"required": 0,
+		"conditional_logic": 0,
+		"wrapper": {
+		  "width": "50",
+		  "class": "",
+		  "id": ""
+		},
+		"default_value": "",
+		"maxlength": "",
+		"placeholder": "",
+		"prepend": "",
+		"append": ""
+	  },
+	  {
+		"key": "field_653f7d940a222",
+		"label": "Inspection day(s)",
+		"name": "inspection_days",
+		"aria-label": "",
+		"type": "repeater",
+		"instructions": "",
+		"required": 0,
+		"conditional_logic": 0,
+		"wrapper": {
+		  "width": "50",
+		  "class": "",
+		  "id": ""
+		},
+		"acfe_repeater_stylised_button": 1,
+		"layout": "block",
+		"pagination": 0,
+		"min": 0,
+		"max": 0,
+		"collapsed": "field_653f7e0d0a223",
+		"button_label": "Add Inspection Day",
+		"rows_per_page": 20,
+		"sub_fields": [
+		  {
+			"key": "field_653f7e0d0a223",
+			"label": "Day",
+			"name": "day",
+			"aria-label": "",
+			"type": "date_picker",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+			  "width": "50",
+			  "class": "",
+			  "id": ""
+			},
+			"display_format": "d\/m\/Y",
+			"return_format": "d\/m\/Y",
+			"first_day": 0,
+			"placeholder": "",
+			"min_date": "",
+			"max_date": "",
+			"no_weekends": 0,
+			"parent_repeater": "field_653f7d940a222"
+		  },
+		  {
+			"key": "field_653f7e410a224",
+			"label": "Times",
+			"name": "times",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+			  "width": "50",
+			  "class": "",
+			  "id": ""
+			},
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"parent_repeater": "field_653f7d940a222"
+		  }
+		]
+	  },
+	  {
+		"key": "field_653f7e980a225",
+		"label": "Move out day(s)",
+		"name": "move_out_days",
+		"aria-label": "",
+		"type": "repeater",
+		"instructions": "",
+		"required": 0,
+		"conditional_logic": 0,
+		"wrapper": {
+		  "width": "50",
+		  "class": "",
+		  "id": ""
+		},
+		"acfe_repeater_stylised_button": 1,
+		"layout": "block",
+		"pagination": 0,
+		"min": 0,
+		"max": 0,
+		"collapsed": "field_653f7e0d0a223",
+		"button_label": "Add Move Out Day",
+		"rows_per_page": 20,
+		"sub_fields": [
+		  {
+			"key": "field_653f7e980a226",
+			"label": "Day",
+			"name": "day",
+			"aria-label": "",
+			"type": "date_picker",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+			  "width": "50",
+			  "class": "",
+			  "id": ""
+			},
+			"display_format": "F j, Y",
+			"return_format": "F j, Y",
+			"first_day": 0,
+			"placeholder": "",
+			"min_date": "",
+			"max_date": "",
+			"no_weekends": 0,
+			"parent_repeater": "field_653f7e980a225"
+		  },
+		  {
+			"key": "field_653f7e980a227",
+			"label": "Times",
+			"name": "times",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+			  "width": "50",
+			  "class": "",
+			  "id": ""
+			},
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"parent_repeater": "field_653f7e980a225"
+		  }
+		]
+	  },
+	  {
+		"key": "field_653f80162c6b5",
+		"label": "Location",
+		"name": "",
+		"aria-label": "",
+		"type": "tab",
+		"instructions": "",
+		"required": 0,
+		"conditional_logic": 0,
+		"wrapper": {
+		  "width": "",
+		  "class": "",
+		  "id": ""
+		},
+		"placement": "top",
+		"endpoint": 0,
+		"no_preference": 0
+	  },
+	  {
+		"key": "field_653f803c2c6b6",
+		"label": "Location Details",
+		"name": "location_details",
+		"aria-label": "",
+		"type": "repeater",
+		"instructions": "",
+		"required": 0,
+		"conditional_logic": 0,
+		"wrapper": {
+		  "width": "",
+		  "class": "",
+		  "id": ""
+		},
+		"acfe_repeater_stylised_button": 1,
+		"layout": "block",
+		"pagination": 0,
+		"min": 0,
+		"max": 0,
+		"collapsed": "",
+		"button_label": "Add Location",
+		"rows_per_page": 20,
+		"sub_fields": [
+		  {
+			"key": "field_653f80872c6b7",
+			"label": "Location Name",
+			"name": "location_name",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+			  "width": "35",
+			  "class": "",
+			  "id": ""
+			},
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"parent_repeater": "field_653f803c2c6b6"
+		  },
+		  {
+			"key": "field_653f80b12c6b8",
+			"label": "Location Address",
+			"name": "location_address",
+			"aria-label": "",
+			"type": "textarea",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+			  "width": "55",
+			  "class": "",
+			  "id": ""
+			},
+			"default_value": "",
+			"acfe_textarea_code": 0,
+			"maxlength": "",
+			"rows": 3,
+			"placeholder": "",
+			"new_lines": "br",
+			"parent_repeater": "field_653f803c2c6b6"
+		  },
+		  {
+			"key": "field_653f813ca489a",
+			"label": "Map",
+			"name": "map",
+			"aria-label": "",
+			"type": "google_map",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+			  "width": "100",
+			  "class": "",
+			  "id": ""
+			},
+			"default_value": "",
+			"center_lat": "46.4519675",
+			"center_lng": "3.3221324",
+			"height": 400,
+			"acfe_google_map_zooms": {
+			  "zoom": "2",
+			  "min_zoom": "0",
+			  "max_zoom": "21"
+			},
+			"acfe_google_map_marker_icon": "",
+			"acfe_google_map_marker_width": 50,
+			"acfe_google_map_type": "roadmap",
+			"acfe_google_map_disable_ui": 0,
+			"acfe_google_map_disable_zoom_control": 0,
+			"acfe_google_map_disable_map_type": 0,
+			"acfe_google_map_disable_fullscreen": 0,
+			"acfe_google_map_disable_streetview": 0,
+			"acfe_google_map_style": "[\r\n    {\r\n        \"featureType\": \"administrative\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"landscape\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"simplified\"\r\n            },\r\n            {\r\n                \"hue\": \"#0066ff\"\r\n            },\r\n            {\r\n                \"saturation\": 74\r\n            },\r\n            {\r\n                \"lightness\": 100\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"poi\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"simplified\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"simplified\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road.highway\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            },\r\n            {\r\n                \"weight\": 0.6\r\n            },\r\n            {\r\n                \"saturation\": -85\r\n            },\r\n            {\r\n                \"lightness\": 61\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road.highway\",\r\n        \"elementType\": \"geometry\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"on\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road.arterial\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road.local\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"on\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"transit\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"simplified\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"water\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"simplified\"\r\n            },\r\n            {\r\n                \"color\": \"#5f94ff\"\r\n            },\r\n            {\r\n                \"lightness\": 26\r\n            },\r\n            {\r\n                \"gamma\": 5.86\r\n            }\r\n        ]\r\n    }\r\n]",
+			"acfe_google_map_key": "",
+			"zoom": "2",
+			"acfe_google_map_marker_height": 50,
+			"parent_repeater": "field_653f803c2c6b6"
+		  },
+		  {
+			"key": "field_653f825e73387",
+			"label": "Notes\/Instructions",
+			"name": "notes_instructions",
+			"aria-label": "",
+			"type": "textarea",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+			  "width": "100",
+			  "class": "",
+			  "id": ""
+			},
+			"default_value": "",
+			"acfe_textarea_code": 0,
+			"maxlength": "",
+			"rows": 3,
+			"placeholder": "",
+			"new_lines": "wpautop",
+			"parent_repeater": "field_653f803c2c6b6"
+		  }
+		]
+	  },
+	  {
+		"key": "field_653f82a973388",
+		"label": "Items",
+		"name": "",
+		"aria-label": "",
+		"type": "tab",
+		"instructions": "",
+		"required": 0,
+		"conditional_logic": 0,
+		"wrapper": {
+		  "width": "",
+		  "class": "",
+		  "id": ""
+		},
+		"placement": "top",
+		"endpoint": 0,
+		"no_preference": 0
+	  },
+	  {
+		"key": "field_653f82cd73389",
+		"label": "Key Item List",
+		"name": "",
+		"aria-label": "",
+		"type": "acfe_post_field",
+		"instructions": "",
+		"required": 0,
+		"conditional_logic": 0,
+		"wrapper": {
+		  "width": "",
+		  "class": "",
+		  "id": ""
+		},
+		"field_type": "excerpt"
+	  }
+	],
+	"location": [
+	  [
+		{
+		  "param": "post_type",
+		  "operator": "==",
+		  "value": "auction"
+		}
+	  ]
+	],
+	"menu_order": 0,
+	"position": "acf_after_title",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "",
+	"show_in_rest": 0,
+	"acfe_autosync": "",
+	"acfe_form": 0,
+	"acfe_display_title": "",
+	"acfe_meta": "",
+	"acfe_note": "",
+	"acfcdt_manage_table_definition": 0,
+	"acfcdt_table_definition_file_name": "table_93x653f7bcd9b017"
+  }
+]

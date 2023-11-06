@@ -2518,183 +2518,11 @@ if( function_exists('acf_add_local_field_group') ):
 		'modified' => 1476826847,
 	));
 
-	//***************************************   PORTFOLIO DETAILS
-	acf_add_local_field_group(array (
-		'key' => 'group_590bf408c8e1b',
-		'title' => 'Portfolio Details',
-		'fields' => array (
-			array (
-				'key' => 'field_5910044346ab2',
-				'label' => 'Project subtitle',
-				'name' => 'portfolio_subtitle',
-				'type' => 'text',
-				'instructions' => 'this is the descriptive text to go under the client name.',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array (
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_590bf40f3263f',
-				'label' => 'Site URL',
-				'name' => 'portfolio_site_url',
-				'type' => 'url',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array (
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'default_value' => '',
-				'placeholder' => '',
-			),
-			array (
-				'key' => 'field_590bf43332640',
-				'label' => 'Date completed',
-				'name' => 'portfolio_date_completed',
-				'type' => 'text',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array (
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_590fed8969912',
-				'label' => 'Page background',
-				'name' => 'page_background',
-				'type' => 'select',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array (
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'choices' => array (
-					'none' => 'No background',
-					'pattern-grey-1' => 'Grey, with large arrows',
-					'pattern-green' => 'Green',
-					'pattern-purple' => 'Purple',
-					'pattern-teal' => 'Teal',
-					'pattern-dark-blue' => 'Dark blue',
-					'pattern-orange' => 'Orange',
-					'pattern-grey-2' => 'Grey, with multi-colored lines',
-					'pattern-gold' => 'Gold',
-					'pattern-light' => 'Light',
-					'pattern-light-blue' => 'Light blue',
-					'granite-texture' => 'Granite',
-				),
-				'default_value' => array (
-					0 => 'none',
-				),
-				'allow_null' => 0,
-				'multiple' => 0,
-				'ui' => 0,
-				'ajax' => 0,
-				'return_format' => 'value',
-				'placeholder' => '',
-			),
-			array (
-				'key' => 'field_598de22892389',
-				'label' => 'Featured image frame',
-				'name' => 'featured_image_frame',
-				'type' => 'select',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array (
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'choices' => array (
-					'no-frame' => 'No frame',
-					'browser-frame' => 'Browser frame',
-					'browser-frame-no-url' => 'Browser frame, with no URL area',
-					'video-frame' => 'Video frame',
-					'photo-frame' => 'Photo / print work frame',
-				),
-				'default_value' => array (
-					0 => 'no-frame',
-				),
-				'allow_null' => 0,
-				'multiple' => 0,
-				'ui' => 0,
-				'ajax' => 0,
-				'return_format' => 'value',
-				'placeholder' => '',
-			),
-			array (
-				'key' => 'field_5911fda4e777d',
-				'label' => 'Featured?',
-				'name' => 'portfolio_featured',
-				'type' => 'true_false',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array (
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'message' => 'Feature this project',
-				'default_value' => 0,
-				'ui' => 0,
-				'ui_on_text' => '',
-				'ui_off_text' => '',
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'portfolio',
-				),
-			),
-		),
-		'menu_order' => 0,
-		'position' => 'side',
-		'style' => 'default',
-		'label_placement' => 'top',
-		'instruction_placement' => 'label',
-		'hide_on_screen' => array (
-			0 => 'the_content',
-			1 => 'excerpt',
-			2 => 'custom_fields',
-			3 => 'discussion',
-			4 => 'comments',
-			5 => 'revisions',
-			6 => 'author',
-			7 => 'format',
-			8 => 'send-trackbacks',
-		),
-		'active' => 1,
-		'description' => '',
-	));
+	//***************************************   AUCTION DETAILS
+
 
 	//***************************************   LANDING PAGE SECTIONS
-	acf_add_local_field_group(array (
+/*	acf_add_local_field_group(array (
 		'key' => 'group_597b43a06a7fb',
 		'title' => 'Landing Page Sections',
 		'fields' => array (
@@ -3124,6 +2952,7 @@ if( function_exists('acf_add_local_field_group') ):
 								'value' => NULL,
 								'menu_order' => 0,
 								'instructions' => '',
+								'allow_custom' => 0,
 								'required' => 0,
 								'id' => '',
 								'class' => '',
@@ -3163,6 +2992,7 @@ if( function_exists('acf_add_local_field_group') ):
 								'value' => NULL,
 								'menu_order' => 1,
 								'instructions' => '',
+								'allow_custom' => 0,
 								'required' => 0,
 								'id' => '',
 								'class' => '',
@@ -4095,7 +3925,7 @@ if( function_exists('acf_add_local_field_group') ):
 		),
 		'active' => 1,
 		'description' => '',
-	));
+	));*/
 
 
 

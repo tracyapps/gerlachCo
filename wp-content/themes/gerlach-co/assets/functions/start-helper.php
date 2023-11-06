@@ -296,3 +296,62 @@ function hex_to_rgb( $color, $opacity = false ) {
 	return esc_attr( $output );
 
 }
+/**
+ * function to support the following function, and query from a repeater field
+ *
+ * @param $where
+ * @return array|string|string[]
+ */
+function start_replace_repeater_field( $where ) {
+	$where = str_replace( "meta_key = 'move_out_days_$", "meta_key LIKE 'move_out_days_%", $where );
+	return $where;
+}
+add_filter( 'posts_where', 'start_replace_repeater_field' );
+
+/**
+ *  helper function for displaying the list of current auctions
+ *
+ * @return string
+ */
+function display_current_auctions() {
+	global $post;
+
+	date_default_timezone_set('America/Chicago');
+	$today = date('Ymd', strtotime("now"));
+
+	$args = array(
+		'post_type' => 'auction',
+		'relation'	=> 'OR',
+		// check to see if end date has been set
+		array(
+			'key'		=> 'move_out_days_$_day',
+			'compare'	=> '<=',
+			'type'		=> 'numeric',
+			'value'		=> $today,
+		),
+		// if no end date has been set use start date
+		array(
+			'key'		=> 'auction_ends',
+			'compare'	=> '<=',
+			'type'		=> 'numeric',
+			'value'		=> $today,
+		)
+	);
+	$current_auctions = new WP_Query( $args );
+
+	$output ='<section class="auctions_list current_auctions"><h2 class="section_title">Current Auctions</h2>';
+
+	if ( $current_auctions->have_posts() ) :
+		while ( $current_auctions->have_posts() ) :
+			$current_auctions->the_post();
+			$output .= '<div class="auction_listing">';
+			$output .= get_the_title();
+			$output .= '</div>';
+		endwhile;
+	endif;
+
+
+	$output .='</section>';
+
+	return $output;
+}

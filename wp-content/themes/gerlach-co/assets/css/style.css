@@ -372,6 +372,14 @@ a.wp-block-button__link.text_link:active {
   text-align: center;
 }
 
+.flex-row {
+  display: flex;
+  width: 100%;
+}
+.flex-row * {
+  flex: 1;
+}
+
 h1,
 h2,
 h3,
@@ -383,7 +391,7 @@ h6 {
   font-family: var(--typography-header_text);
   padding-left: 2rem;
   padding-right: 2rem;
-  max-width: 850px;
+  max-width: 100ch;
   margin-left: auto;
   margin-right: auto;
 }
@@ -391,20 +399,26 @@ h6 {
 p {
   padding-left: 2rem;
   padding-right: 2rem;
-  max-width: 850px;
+  max-width: 100ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+  max-width: 100ch;
   margin-left: auto;
   margin-right: auto;
 }
 
 blockquote {
-  max-width: 850px;
+  max-width: 100ch;
   margin-left: auto;
   margin-right: auto;
 }
 
 .page-content ul,
 .page-content ol {
-  max-width: 850px;
+  max-width: 100ch;
   margin-left: auto;
   margin-right: auto;
 }
@@ -718,7 +732,7 @@ input[aria-invalid=true] {
   transform: scale(0.52) translateX(123%) translateY(60%);
 }
 .site-header #GERLACH__COMPANIES__INC--logo {
-  margin: 0 0 -24px -50px;
+  margin: 0 0 -24px -40px;
 }
 @media (max-width: 600px) {
   .site-header #GERLACH__COMPANIES__INC--logo {
@@ -740,8 +754,13 @@ input[aria-invalid=true] {
 .site-header #GERLACH__COMPANIES__INC--logo #FRED__GREYSCALE image {
   transform: scale(1) translateX(62%) translateY(0%);
 }
-.site-header.smaller .main-navigation {
-  margin-top: 0;
+@media (min-width: 900px) {
+  .site-header.smaller .main-navigation {
+    margin-top: 0;
+  }
+  .home .site-header.smaller .main-navigation {
+    margin-top: 0;
+  }
 }
 .site-header .main-navigation {
   text-align: center;
@@ -756,6 +775,9 @@ input[aria-invalid=true] {
 }
 @media (min-width: 900px) {
   .site-header .main-navigation {
+    margin-top: 4em;
+  }
+  .home .site-header .main-navigation {
     margin-top: 8em;
   }
 }
@@ -903,7 +925,7 @@ input[aria-invalid=true] {
 }
 
 .site-content {
-  min-height: 200vh;
+  min-height: 100vh;
 }
 #inner-content {
   display: flex;
@@ -914,7 +936,6 @@ input[aria-invalid=true] {
 #inner-content > .main-column {
   min-width: 63.8%;
 }
-
 aside.aside_section {
   padding: 2em;
   background: var(--brand_color-white);
@@ -997,8 +1018,9 @@ footer.site-footer p {
 }
 
 .page_featured_image_container {
-  min-height: 33vh;
+  min-height: 36vh;
   position: relative;
+  margin-top: 5em;
 }
 .page_featured_image_container img {
   width: 100%;
@@ -1027,12 +1049,13 @@ h2.page_title {
   line-height: 1;
   text-align: center;
   color: var(--page_header--page_title);
-  padding: 0.3em 10px 0.15em 10px;
+  padding: 0.65em 10px 0.15em 10px;
 }
 .no-featured-image .page_title,
 .no-featured-image h1.page_title,
 .no-featured-image h2.page_title {
-  padding-top: 2.2em;
+  padding-top: 4em;
+  color: var(--body--text_color);
 }
 
 .page_tagline {
@@ -1162,6 +1185,41 @@ span.pulled-left {
     width: 200px;
     font-size: 1.3em;
   }
+}
+
+.auction_listing {
+  background: var(--brand_color-white);
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 1px 1px 18px rgba(0, 0, 0, 0.16);
+  margin-bottom: 2rem;
+}
+.auction_listing h3 {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.auction_listing h3 a {
+  display: block;
+}
+.auction_listing .auction_listing_main {
+  display: flex;
+  justify-content: stretch;
+}
+.auction_listing .auction_dates {
+  background: var(--brand_color-red);
+  color: var(--brand_color-white);
+  min-width: 350px;
+}
+.auction_listing .featured_image_container {
+  width: 100%;
+  height: 100%;
+}
+.auction_listing .featured_image_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .icon-email-dims {

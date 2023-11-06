@@ -89,7 +89,7 @@ function start_custom_post_types() {
 				'with_front' => false
 			),
 			/* you can specify its url slug */
-			'has_archive' => 'auctions',
+			'has_archive' => 'all-auctions',
 			/* you can rename the slug here */
 			'capability_type' => 'post',
 			'hierarchical' => false,

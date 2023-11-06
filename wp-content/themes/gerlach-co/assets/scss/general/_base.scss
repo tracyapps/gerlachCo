@@ -152,7 +152,14 @@ a.wp-block-button__link {
 	text-align: center;
 }
 
+.flex-row {
+	display: flex;
+	width: 100%;
 
+	* {
+		flex: 1;
+	}
+}
 
 
 
@@ -177,6 +184,12 @@ h6 {
 p {
 	padding-left: 2rem;
 	padding-right: 2rem;
+	max-width: $max-text-line-width;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+li {
 	max-width: $max-text-line-width;
 	margin-left: auto;
 	margin-right: auto;

@@ -1,0 +1,45 @@
+// auction list (archive)
+
+.auctions_list {
+
+}
+
+.auction_listing {
+	background: var( --brand_color-white );
+	padding: 1rem;
+	border-radius: 4px;
+	box-shadow: 1px 1px 18px rgba( 0, 0, 0, 0.16 );
+	margin-bottom: 2rem;
+
+	h3 {
+		font-weight: 400;
+		margin: 0;
+		padding: 0;
+		display: block;
+
+		a {
+			display: block;
+		}
+
+	}
+
+	.auction_listing_main {
+		display: flex;
+		justify-content: stretch;
+	}
+	.auction_dates {
+		background: var( --brand_color-red );
+		color: var( --brand_color-white );
+		min-width: 350px;
+	}
+	.featured_image_container {
+		width: 100%;
+		height: 100%;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
