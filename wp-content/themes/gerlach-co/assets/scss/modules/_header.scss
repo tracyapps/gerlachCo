@@ -108,7 +108,8 @@
 			fill: currentColor;
 		}
 		.shadow_color {
-			fill: $mediumgray;
+			fill: currentColor;
+			opacity: 0.4;
 		}
 
 		#logomark__image {

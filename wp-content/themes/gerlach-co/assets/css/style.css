@@ -743,7 +743,8 @@ input[aria-invalid=true] {
   fill: currentColor;
 }
 .site-header #GERLACH__COMPANIES__INC--logo .shadow_color {
-  fill: #737575;
+  fill: currentColor;
+  opacity: 0.4;
 }
 .site-header #GERLACH__COMPANIES__INC--logo #logomark__image {
   margin: -25px 0;

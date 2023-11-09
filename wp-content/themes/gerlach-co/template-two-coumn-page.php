@@ -26,6 +26,9 @@ Template Name: Two Column Page (w/sidebar)
 				if( is_page( 'auctions' ) ) :
 					//echo display_current_auctions();
 
+				// TODO: put this into a template part, and include on single column layout as well
+
+
 					date_default_timezone_set('America/Chicago');
 					$today = date('Ymd', strtotime("now"));
 
