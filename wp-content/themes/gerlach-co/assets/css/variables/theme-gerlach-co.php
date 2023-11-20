@@ -40,7 +40,7 @@
 		--nav_item--background_color: 	transparent;
 		--nav_item--text_color: 		currentColor;
 
-		--nav_item_hover--background_color: var( --brand_color-red );
+		--nav_item_hover--background_color: var( --brand_color-mediumgray );
 		--nav_item_hover--text_color: 	var( --brand_color-white );
 
 		--page_header--page_title: 		var( --brand_color-white );
