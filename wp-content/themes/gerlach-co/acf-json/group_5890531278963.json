@@ -1,0 +1,288 @@
+{
+    "key": "group_5890531278963",
+    "title": "Person Details",
+    "fields": [
+        {
+            "key": "field_5890580117656",
+            "label": "Photo",
+            "name": "person_photo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "45",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "uploader": "",
+            "acfe_thumbnail": 0,
+            "upload_folder": ""
+        },
+        {
+            "key": "field_5890531b1046d",
+            "label": "Job Title",
+            "name": "person_position",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "55",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_589223e3f5750",
+            "label": "Short Bio",
+            "name": "person_short_bio",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "new_lines": "wpautop",
+            "maxlength": "",
+            "placeholder": "",
+            "rows": 5,
+            "acfe_textarea_code": 0
+        },
+        {
+            "key": "field_5890588717657",
+            "label": "Profile Type",
+            "name": "simple_or_extended_profile",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "simple": "Simple Profile",
+                "extended": "Extended Profile"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "simple",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_589bac059cfd9",
+            "label": "Associated User",
+            "name": "person_associated_user",
+            "aria-label": "",
+            "type": "user",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "role": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "array",
+            "bidirectional_target": [],
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_58905ace1765b",
+            "label": "Person's First Name",
+            "name": "person_first_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "If you need filtering or sorting by first name.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5890588717657",
+                        "operator": "==",
+                        "value": "extended"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_58905b331765c",
+            "label": "Person's Last Name",
+            "name": "person_last_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "If you need filtering or sorting by last name.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5890588717657",
+                        "operator": "==",
+                        "value": "extended"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5890599317658",
+            "label": "Additional Fields",
+            "name": "person_additional_fields",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add additional details. Fill out the label and the content for each.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5890588717657",
+                        "operator": "==",
+                        "value": "extended"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Detail",
+            "collapsed": "field_58905a4117659",
+            "rows_per_page": 20,
+            "acfe_repeater_stylised_button": 0,
+            "sub_fields": [
+                {
+                    "key": "field_58905a4117659",
+                    "label": "Detail Label",
+                    "name": "detail_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_5890599317658"
+                },
+                {
+                    "key": "field_58905a611765a",
+                    "label": "Detail Content",
+                    "name": "detail_content",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "60",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "new_lines": "wpautop",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "rows": 3,
+                    "acfe_textarea_code": 0,
+                    "parent_repeater": "field_5890599317658"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "staff"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "author",
+        "categories",
+        "excerpt",
+        "featured_image",
+        "format",
+        "tags"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "acfcdt_manage_table_definition": 0,
+    "acfcdt_table_definition_file_name": "table_182x655ada1fe1fde",
+    "modified": 1700452900
+}
