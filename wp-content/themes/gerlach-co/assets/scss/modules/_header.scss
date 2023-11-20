@@ -250,8 +250,7 @@
 			top: 100%;
 			a,
 			a:visited {
-				color: var(--smaller_header--nav_text_color);
-				padding: 1em 1.5em;
+				padding: 0.75em 1.5em;
 			}
 
 			li {
@@ -276,13 +275,15 @@
 
 
 
-		a {
+		a,
+		a:visited {
 			display: block;
 			padding: 0.5em 1.05em;
 			text-decoration: none;
 			transition: all $button-transition-speed ease-in-out;
 			text-align: left;
-			color: var(--header--nav_text_color);
+			color: var( --nav_item--text_color );
+			border-top: 5px solid transparent;
 			border-bottom: 5px solid transparent;
 
 			&:hover,
@@ -318,8 +319,9 @@
 	&.smaller .main-navigation {
 		color: var(--smaller_header--nav_text_color);
 
-		a {
-			color: currentColor;
+		a,
+		a:visited {
+			color: var( --nav_item--text_color );
 
 			&:hover,
 			&:focus,
