@@ -99,8 +99,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "d\/m\/Y",
-                    "return_format": "d\/m\/Y",
+                    "display_format": "F j, Y",
+                    "return_format": "F j, Y",
                     "first_day": 0,
                     "placeholder": "",
                     "min_date": "",
@@ -525,5 +525,5 @@
     "acfe_note": "",
     "acfcdt_manage_table_definition": 0,
     "acfcdt_table_definition_file_name": "table_93x653f7bcd9b017",
-    "modified": 1700452846
+    "modified": 1700455338
 }
