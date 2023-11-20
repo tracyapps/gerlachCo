@@ -12,6 +12,7 @@
 
 
 	.site-header-content-container {
+		border-top: 7px solid var( --brand_color-red );
 		display: flex;
 		align-items: center;
 		position: absolute;
@@ -52,6 +53,7 @@
 
 		h1 {
 			margin: 0;
+			padding: 0 1em;
 		}
 
 		svg {
@@ -233,10 +235,7 @@
 							display: block;
 							width: 100%;
 
-							a {
-								display: block;
-								color: var(--smaller_header--nav_text_color);
-							}
+
 						}
 					}
 				}
@@ -249,7 +248,8 @@
 			list-style: none;
 			right: 0;
 			top: 100%;
-			a {
+			a,
+			a:visited {
 				color: var(--smaller_header--nav_text_color);
 				padding: 1em 1.5em;
 			}

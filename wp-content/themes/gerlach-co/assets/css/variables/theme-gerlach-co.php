@@ -51,10 +51,10 @@
 		--button_hover--background_color: var( --brand_color-maroon );
 		--button_hover--text_color: 	var( --brand_color-white );
 
-		--footer--background_color:		var( --brand_color-darker );
+		--footer--background_color:		var( --brand_color-red );
 		--footer--text_color:			var( --brand_color-light );
-		--footer--link_color: 			var( --brand_color-red );
-		--footer--link_color_hover:		var( --brand_color-white );
+		--footer--link_color: 			var( --brand_color-white );
+		--footer--link_color_hover:		var( --brand_color-black );
 
 		--form--error_text: 			var( --brand_color-red );
 		--form--valid_text: 			var( --brand_color-teal );

@@ -214,6 +214,7 @@ html {
 body {
   font-size: var(--typography-base_font_size);
   margin: 0;
+  padding: 0;
   font-family: var(--typography-body_text);
   -webkit-tap-highlight-color: #ff0;
   background-color: var(--body--background_color);
@@ -389,16 +390,12 @@ h6 {
   margin-bottom: 0.3em;
   line-height: 1.1;
   font-family: var(--typography-header_text);
-  padding-left: 2rem;
-  padding-right: 2rem;
   max-width: 100ch;
   margin-left: auto;
   margin-right: auto;
 }
 
 p {
-  padding-left: 2rem;
-  padding-right: 2rem;
   max-width: 100ch;
   margin-left: auto;
   margin-right: auto;
@@ -660,6 +657,7 @@ input[aria-invalid=true] {
   z-index: 999999;
 }
 .site-header .site-header-content-container {
+  border-top: 7px solid var(--brand_color-red);
   display: flex;
   align-items: center;
   position: absolute;
@@ -697,6 +695,7 @@ input[aria-invalid=true] {
 }
 .site-header .site-logo h1 {
   margin: 0;
+  padding: 0 1em;
 }
 .site-header .site-logo svg {
   width: 50vw;
@@ -847,10 +846,6 @@ input[aria-invalid=true] {
   display: block;
   width: 100%;
 }
-.site-header .main-navigation ul.menu li.menu-item-has-children > ul.menu li a {
-  display: block;
-  color: var(--smaller_header--nav_text_color);
-}
 .site-header .main-navigation ul.hidden-links {
   position: absolute;
   margin: 0;
@@ -859,7 +854,8 @@ input[aria-invalid=true] {
   right: 0;
   top: 100%;
 }
-.site-header .main-navigation ul.hidden-links a {
+.site-header .main-navigation ul.hidden-links a,
+.site-header .main-navigation ul.hidden-links a:visited {
   color: var(--smaller_header--nav_text_color);
   padding: 1em 1.5em;
 }
@@ -936,6 +932,7 @@ input[aria-invalid=true] {
 }
 #inner-content > .main-column {
   min-width: 63.8%;
+  padding: 2rem;
 }
 aside.aside_section {
   padding: 2em;
@@ -952,7 +949,30 @@ aside.aside_section h3 {
 }
 
 footer.site-footer {
-  padding: 2rem 0;
+  padding: 4rem 0;
+  background: var(--footer--background_color);
+  color: var(--footer--text_color);
+}
+footer.site-footer .footer_logo {
+  width: 80%;
+  max-width: 650px;
+}
+footer.site-footer svg .main_text_color {
+  fill: var(--footer--text_color);
+}
+footer.site-footer svg .shadow_color {
+  fill: var(--brand_color-darker);
+}
+footer.site-footer a,
+footer.site-footer a:visited {
+  color: var(--footer--link_color);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+footer.site-footer a:hover,
+footer.site-footer a:visited:hover {
+  color: var(--footer--link_color_hover);
+  text-decoration: underline;
 }
 footer.site-footer .footer-widget-area {
   display: flex;
@@ -996,6 +1016,22 @@ footer.site-footer .footer-widget-area h4.widgettitle {
 }
 footer.site-footer .footer-widget-area div.column div.widget:first-child h4.widgettitle {
   margin-top: 0;
+}
+footer.site-footer nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+footer.site-footer nav ul li {
+  margin: 0;
+  padding: 0;
+}
+footer.site-footer nav a {
+  padding: 0.5em 1em;
+  display: block;
 }
 footer.site-footer .social-links {
   margin: 0;
@@ -1221,6 +1257,61 @@ span.pulled-left {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.auction_detail_page .auction_dates {
+  display: flex;
+  background: var(--brand_color-red);
+  color: var(--brand_color-white);
+}
+.auction_detail_page .auction_dates > * {
+  flex: 1;
+  padding: 2rem 3rem 4rem 3rem;
+  border-right: 1px solid var(--brand_color-silver);
+}
+.auction_detail_page .auction_dates > * h4 {
+  margin: 0;
+  padding: 0;
+}
+.auction_detail_page .auction_location {
+  border-bottom: 2px solid var(--brand_color-silver);
+}
+.auction_detail_page .auction_location h4 {
+  margin: 0;
+  padding: 2rem;
+  border-bottom: 2px solid var(--brand_color-red);
+}
+.auction_detail_page .auction_location h6,
+.auction_detail_page .auction_location address {
+  margin: 0.75em 0;
+}
+.auction_detail_page .auction_location .google_map_embed {
+  width: 100%;
+  min-height: 350px;
+}
+.auction_detail_page .sidebar {
+  background: var(--brand_color-silver);
+  box-shadow: 1px 1px 18px rgba(0, 0, 0, 0.24);
+}
+.auction_detail_page .sidebar h6 {
+  margin: 0 0 1rem 0;
+  border-bottom: 2px solid var(--brand_color-red);
+  padding: 1rem 2rem;
+}
+.auction_detail_page .sidebar .item_group {
+  background: rgba(255, 255, 255, 0.45);
+  border-top: 1px solid var(--brand_color-white);
+  padding: 1rem 0 2rem 0;
+  margin-top: 3px;
+}
+.auction_detail_page .sidebar .item_group ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.auction_detail_page .sidebar .item_group li {
+  padding: 0.25rem 2rem;
+  border-bottom: 1px solid var(--brand_color-light);
 }
 
 .icon-email-dims {

@@ -43,3 +43,73 @@
 		}
 	}
 }
+
+// auction detail page
+
+.auction_detail_page {
+	.auction_dates {
+		display: flex;
+		background: var( --brand_color-red );
+		color: var( --brand_color-white );
+
+		> * {
+			flex: 1;
+			padding: 2rem 3rem 4rem 3rem;
+			border-right: 1px solid var( --brand_color-silver );
+
+			h4 {
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+
+	.auction_location {
+
+		border-bottom: 2px solid var( --brand_color-silver );
+
+		h4 {
+			margin: 0;
+			padding: 2rem;
+			border-bottom: 2px solid var( --brand_color-red );
+		}
+		h6,
+		address {
+			margin: 0.75em 0;
+		}
+
+		.google_map_embed {
+			width: 100%;
+			min-height: 350px;
+		}
+	}
+
+	.sidebar {
+		background: var( --brand_color-silver );
+		box-shadow: 1px 1px 18px rgba( 0, 0, 0, 0.24 );
+
+		h6 {
+			margin: 0 0 1rem 0;
+			border-bottom: 2px solid var( --brand_color-red );
+			padding: 1rem 2rem;
+		}
+
+		.item_group {
+			background: rgba( 255, 255, 255, 0.45 );
+			border-top: 1px solid var( --brand_color-white );
+			padding: 1rem 0 2rem 0;
+			margin-top: 3px;
+
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			li {
+				padding: 0.25rem 2rem;
+				border-bottom: 1px solid var( --brand_color-light );
+			}
+		}
+	}
+}

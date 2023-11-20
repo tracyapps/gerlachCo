@@ -290,10 +290,13 @@ if( !is_front_page() && !is_archive() ) :
 
 
 	// start conditional printing of the header, first if there is a featured image....
-	if( has_post_thumbnail() ) :
-		$featuredimage = get_the_post_thumbnail_url( get_the_ID(), 'full' );
-	//	$alt_text = get_post_meta( $thumbnail->ID, '_wp_attachment_image_alt', true );
+	if( has_post_thumbnail() ||  'auction' == get_post_type() ) :
 
+		if ( has_post_thumbnail() ) {
+			$featuredimage = get_the_post_thumbnail_url( get_the_ID(), 'full' );
+		} else {
+			$featuredimage = get_stylesheet_directory_uri() . '/assets/images/sign-header.jpg';
+		}
 
 		printf(
 			'

@@ -1,6 +1,34 @@
 
 footer.site-footer {
-	padding: 2rem 0;
+	padding: 4rem 0;
+	background: var( --footer--background_color);
+	color: var( --footer--text_color );
+
+	.footer_logo {
+		width: 80%;
+		max-width: 650px;
+	}
+	svg {
+		.main_text_color {
+			fill: var( --footer--text_color );
+		}
+
+		.shadow_color {
+			fill: var( --brand_color-darker );
+		}
+	}
+
+	a,
+	a:visited {
+		color: var( --footer--link_color );
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&:hover {
+			color: var( --footer--link_color_hover );
+			text-decoration: underline;
+		}
+	}
 
 	.footer-widget-area {
 
@@ -60,6 +88,29 @@ footer.site-footer {
 			}
 
 		}
+	}
+
+	nav {
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+
+			li {
+				margin: 0;
+				padding: 0;
+
+			}
+		}
+
+		a {
+			padding: 0.5em 1em;
+			display: block;
+		}
+
 	}
 
 	.social-links {
