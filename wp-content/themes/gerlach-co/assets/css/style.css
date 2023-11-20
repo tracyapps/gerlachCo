@@ -881,10 +881,17 @@ input[aria-invalid=true] {
   transition: all 200ms ease-in-out;
   text-align: left;
   color: var(--header--nav_text_color);
+  border-bottom: 5px solid transparent;
 }
 .site-header .main-navigation a:hover, .site-header .main-navigation a:focus, .site-header .main-navigation a:target {
   background-color: var(--nav_item_hover--background_color);
   color: var(--nav_item_hover--text_color);
+}
+.site-header .main-navigation .current_page_item > a {
+  border-bottom: 5px solid var(--brand_color-red);
+}
+.site-header .main-navigation .current_page_ancestor > a {
+  border-bottom: 5px solid var(--brand_color-mediumgray);
 }
 .site-header .main-navigation #menu-home svg {
   fill: currentColor;

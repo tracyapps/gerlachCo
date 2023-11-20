@@ -283,6 +283,7 @@
 			transition: all $button-transition-speed ease-in-out;
 			text-align: left;
 			color: var(--header--nav_text_color);
+			border-bottom: 5px solid transparent;
 
 			&:hover,
 			&:focus,
@@ -293,8 +294,14 @@
 
 		}
 		.current_page_item {
-			a {
-				//	border-bottom: 1px solid currentColor;
+			> a {
+					border-bottom: 5px solid var( --brand_color-red );
+			}
+		}
+
+		.current_page_ancestor {
+			> a {
+				border-bottom: 5px solid var( --brand_color-mediumgray );
 			}
 		}
 		#menu-home {
