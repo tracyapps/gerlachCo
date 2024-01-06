@@ -1,0 +1,47 @@
+{
+    "name": "display-staff",
+    "title": "Display Staff Member",
+    "active": true,
+    "description": "",
+    "category": "common",
+    "icon": {
+        "background": "#590f11",
+        "foreground": "#ffffff",
+        "src": "dashicons-nametag"
+    },
+    "keywords": [],
+    "post_types": [
+        "post",
+        "page",
+        "auction"
+    ],
+    "mode": "auto",
+    "align": "wide",
+    "align_text": "left",
+    "align_content": "top",
+    "render_template": "acf-blocks\/display-staff\/display-staff.php",
+    "render_callback": "",
+    "enqueue_style": "",
+    "enqueue_script": "",
+    "enqueue_assets": "",
+    "supports": {
+        "anchor": true,
+        "align": [
+            "center",
+            "wide",
+            "full",
+            ""
+        ],
+        "align_text": true,
+        "align_content": false,
+        "full_height": false,
+        "mode": true,
+        "multiple": true,
+        "example": [],
+        "jsx": false
+    },
+    "acfe_autosync": [
+        "json"
+    ],
+    "modified": 1704562307
+}
