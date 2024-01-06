@@ -12,7 +12,7 @@ if( $auction_link ) :
 		$day_unformatted = (int) $day['field_653f7e980a226'];
 		//$this_week = ( $today + 07 );
 
-		if ( $this_week > $day_unformatted ) {
+		if ( $today > $day_unformatted ) {
 			$button_disabled = true;
 		} else {
 			$button_disabled = false;
