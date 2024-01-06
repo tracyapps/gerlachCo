@@ -1,0 +1,43 @@
+.block-display-staff {
+	margin: 1em auto 3em auto;
+	display: flex;
+	align-items: center;
+
+	.person_headshot_container {
+		max-width: 30%;
+		margin: 1em;
+	}
+
+	.person_bio_container {
+		flex: 1;
+		padding: 1em;
+
+		h5 {
+			margin-top: 0;
+			padding: 0 1rem;
+			display: block;
+			border-bottom: 2px solid $red;
+
+			span.job_title {
+				font-size: 50%;
+				color: $maroon;
+			}
+		}
+
+		p {
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+	}
+
+	&.style-card {
+		background: var( --brand_color-white );
+		padding: 1rem;
+		border-radius: 10px;
+		box-shadow: 1px 1px 18px rgba( 0, 0, 0, 0.16 );
+		margin: 2em auto 4em auto;
+		border: 2px solid transparent;
+		transition: all 200ms ease-in-out;
+		max-width: 90%;
+	}
+}

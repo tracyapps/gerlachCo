@@ -2,7 +2,6 @@
  * adding "smaller" class for the top fixed nav
  */
 
-
 jQuery(document).ready( function($) {
 
 	$(window).scroll(function() {

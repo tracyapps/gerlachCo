@@ -654,7 +654,7 @@ input[aria-invalid=true] {
   position: sticky;
   top: 0;
   max-width: 100vw;
-  z-index: 999999;
+  z-index: 99995;
 }
 .site-header .site-header-content-container {
   border-top: 7px solid var(--brand_color-red);
@@ -1186,6 +1186,44 @@ footer.site-footer p {
   padding: 0;
 }
 
+.block-display-staff {
+  margin: 1em auto 3em auto;
+  display: flex;
+  align-items: center;
+}
+.block-display-staff .person_headshot_container {
+  max-width: 30%;
+  margin: 1em;
+}
+.block-display-staff .person_bio_container {
+  flex: 1;
+  padding: 1em;
+}
+.block-display-staff .person_bio_container h5 {
+  margin-top: 0;
+  padding: 0 1rem;
+  display: block;
+  border-bottom: 2px solid #BF2026;
+}
+.block-display-staff .person_bio_container h5 span.job_title {
+  font-size: 50%;
+  color: #590F11;
+}
+.block-display-staff .person_bio_container p {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.block-display-staff.style-card {
+  background: var(--brand_color-white);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 18px rgba(0, 0, 0, 0.16);
+  margin: 2em auto 4em auto;
+  border: 2px solid transparent;
+  transition: all 200ms ease-in-out;
+  max-width: 90%;
+}
+
 .page_featured_image_container {
   min-height: 36vh;
   position: relative;
@@ -1307,6 +1345,10 @@ h2.page_title {
 
 header.article-header .byline {
   padding: 0 0 6rem 0;
+}
+
+#swipebox-overlay {
+  z-index: 9999999999 !important;
 }
 
 nav.next-and-previous-posts {

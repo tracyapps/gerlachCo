@@ -77,6 +77,10 @@
 						<?php endif; ?>
 					</section>
 
+					<section class="full_content_section">
+						<?php the_content(); ?>
+					</section>
+
 
 				<?php endwhile;
 				endif; ?>

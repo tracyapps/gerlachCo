@@ -12,6 +12,12 @@ header.article-header {
 
 
 
+#swipebox-overlay {
+	z-index: 9999999999 !important;
+}
+
+
+
 nav.next-and-previous-posts {
 	display: flex;
 	justify-content: space-between;
