@@ -390,7 +390,7 @@ h6 {
   margin-bottom: 0.3em;
   line-height: 1.1;
   font-family: var(--typography-header_text);
-  max-width: 100ch;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1069,6 +1069,123 @@ footer.site-footer p {
   max-width: none;
 }
 
+.block-display-auction .auction_listing {
+  padding: 1em;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+.block-display-auction .auction_listing h5 {
+  margin-top: 0;
+}
+.block-display-auction .auction_listing .featured_image_container img {
+  margin: 0 -1em;
+  width: calc(100% + 2em);
+  max-width: none;
+}
+.block-display-auction.style-plain {
+  width: 95vw;
+  max-width: 100ch;
+  margin: 2em auto;
+}
+.block-display-auction.style-plain .auction_listing {
+  box-shadow: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.block-display-auction.style-plain .auction_listing header {
+  flex: none;
+  width: 100%;
+}
+.block-display-auction.style-plain .auction_listing .featured_image_container {
+  max-width: 35%;
+  height: auto;
+}
+.block-display-auction.style-plain .auction_listing .featured_image_container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.block-display-auction.style-plain .auction_listing .auction_details {
+  flex: 1;
+}
+.block-display-auction.style-plain .auction_listing .auction_details .auction_dates {
+  background: none;
+  color: #303030;
+}
+.block-display-auction.style-list .list_container {
+  width: 95vw;
+  max-width: 100ch;
+  margin: 2em auto;
+}
+.block-display-auction.style-list .auction_details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.73);
+}
+.block-display-auction.style-list .auction_details .auction_dates {
+  display: flex;
+}
+.block-display-auction.style-list .auction_details .auction_dates > div {
+  padding: 0.5em 1em;
+  flex: 1;
+}
+.block-display-auction.style-list .auction_details .auction_dates h6 {
+  margin-top: 0;
+}
+.block-display-auction.style-list .auction_details .auction_dates ul,
+.block-display-auction.style-list .auction_details .auction_dates li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.block-display-auction.style-grid .grid_container {
+  width: 98vw;
+  margin: 2em auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+  grid-gap: 1rem;
+}
+.block-display-auction.style-grid .auction_listing {
+  border: 2px solid transparent;
+  transition: all 200ms ease-in-out;
+}
+.block-display-auction.style-grid .auction_listing:hover, .block-display-auction.style-grid .auction_listing:target, .block-display-auction.style-grid .auction_listing:focus {
+  border: 2px solid #BF2026;
+  box-shadow: 1px 1px 23px rgba(0, 0, 0, 0.46);
+}
+.block-display-auction.style-grid .auction_details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.73);
+  font-size: 80%;
+}
+.block-display-auction.style-grid .auction_details .auction_dates {
+  display: flex;
+}
+.block-display-auction.style-grid .auction_details .auction_dates > div {
+  padding: 0.5em 1em;
+  flex: 1;
+}
+.block-display-auction.style-grid .auction_details .auction_dates h6 {
+  margin-top: 0;
+}
+.block-display-auction.style-grid .auction_details .auction_dates ul,
+.block-display-auction.style-grid .auction_details .auction_dates li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .page_featured_image_container {
   min-height: 36vh;
   position: relative;
@@ -1245,6 +1362,12 @@ span.pulled-left {
   border-radius: 4px;
   box-shadow: 1px 1px 18px rgba(0, 0, 0, 0.16);
   margin-bottom: 2rem;
+  border: 2px solid transparent;
+  transition: all 200ms ease-in-out;
+}
+.auction_listing:hover, .auction_listing:target, .auction_listing:focus {
+  border: 2px solid #BF2026;
+  box-shadow: 1px 1px 23px rgba(0, 0, 0, 0.46);
 }
 .auction_listing h3 {
   font-weight: 400;
@@ -1263,6 +1386,13 @@ span.pulled-left {
   background: var(--brand_color-red);
   color: var(--brand_color-white);
   min-width: 350px;
+  padding: 1em;
+}
+.auction_listing .auction_dates ul,
+.auction_listing .auction_dates li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .auction_listing .featured_image_container {
   width: 100%;

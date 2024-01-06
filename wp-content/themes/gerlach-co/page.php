@@ -12,6 +12,18 @@
 
 					endwhile; endif; ?>
 
+			<?php
+			// if this is the "current auctions" page, we're gonna show the list of auctions
+			if( is_page( 'auctions' ) ) :
+
+				echo display_current_auctions();
+				wp_reset_postdata();
+
+				echo display_past_auctions();
+				wp_reset_postdata();
+
+			endif; ?>
+
 		</main> <!-- end #main -->
 
 	</div> <!-- end #inner-content -->

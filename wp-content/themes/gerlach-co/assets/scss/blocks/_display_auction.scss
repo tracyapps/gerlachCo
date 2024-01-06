@@ -1,0 +1,159 @@
+.block-display-auction {
+
+	.auction_listing {
+		padding: 1em;
+		border-radius: 5px;
+		position: relative;
+		margin-bottom: 2em;
+		overflow: hidden;
+
+		h5 {
+			margin-top: 0;
+		}
+
+		 .featured_image_container img {
+			margin: 0 -1em;
+			width: calc( 100% + 2em );
+			max-width: none;
+		}
+	}
+
+	&.style-plain {
+		width: 95vw;
+		max-width: $max-text-line-width;
+		margin: 2em auto;
+
+		.auction_listing {
+			box-shadow: none;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: stretch;
+			justify-content: space-between;
+
+			header {
+				flex: none;
+				width: 100%;
+			}
+
+			.featured_image_container {
+				max-width: 35%;
+				height: auto;
+
+				img {
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+				}
+
+			}
+
+			.auction_details {
+				flex: 1;
+
+				.auction_dates {
+					background: none;
+					color: $dark;
+				}
+			}
+
+
+		}
+	}
+
+
+	&.style-list {
+		// stylized list
+
+		.list_container {
+			width: 95vw;
+			max-width: $max-text-line-width;
+			margin: 2em auto;
+		}
+
+		.auction_details {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			box-shadow: 0 -1px 2px rgba( 0, 0, 0, 0.73 );
+
+
+			.auction_dates {
+				display: flex;
+
+				> div {
+					padding: 0.5em 1em;
+					flex: 1;
+				}
+
+				h6 {
+					margin-top: 0;
+				}
+
+				ul,
+				li {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+			}
+
+		}
+	}
+
+	&.style-grid {
+		.grid_container {
+			width: 98vw;
+			margin: 2em auto;
+
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+			grid-gap: 1rem;
+		}
+
+		.auction_listing {
+			border: 2px solid transparent;
+			transition: all 200ms ease-in-out;
+
+			&:hover,
+			&:target,
+			&:focus {
+				border: 2px solid $red;
+				box-shadow: 1px 1px 23px rgba( 0, 0, 0, 0.46 );
+			}
+		}
+
+		.auction_details {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.73);
+			font-size: 80%;
+
+
+
+			.auction_dates {
+				display: flex;
+
+				> div {
+					padding: 0.5em 1em;
+					flex: 1;
+				}
+
+				h6 {
+					margin-top: 0;
+				}
+
+				ul,
+				li {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+}

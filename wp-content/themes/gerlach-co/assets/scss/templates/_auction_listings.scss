@@ -10,6 +10,15 @@
 	border-radius: 4px;
 	box-shadow: 1px 1px 18px rgba( 0, 0, 0, 0.16 );
 	margin-bottom: 2rem;
+	border: 2px solid transparent;
+	transition: all 200ms ease-in-out;
+
+	&:hover,
+	&:target,
+	&:focus {
+		border: 2px solid $red;
+		box-shadow: 1px 1px 23px rgba( 0, 0, 0, 0.46 );
+	}
 
 	h3 {
 		font-weight: 400;
@@ -31,6 +40,15 @@
 		background: var( --brand_color-red );
 		color: var( --brand_color-white );
 		min-width: 350px;
+		padding: 1em;
+
+
+		ul,
+		li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
 	}
 	.featured_image_container {
 		width: 100%;

@@ -321,21 +321,28 @@ function display_current_auctions() {
 
 	$args = array(
 		'post_type' => 'auction',
-		'relation'	=> 'OR',
-		// check to see if end date has been set
-		array(
-			'key'		=> 'move_out_days_$_day',
-			'compare'	=> '<=',
-			'type'		=> 'numeric',
-			'value'		=> $today,
+		'post_status' => 'publish',
+		'posts_per_page' => '999',
+		'meta_query' => array(
+			'relation'	=> 'OR',
+			// move out days
+			array(
+				'key'		=> 'move_out_days_$_day',
+				'compare'	=> '>=',
+				'type'		=> 'NUMERIC',
+				'value'		=> $today,
+			),
+			// auction end date
+			array(
+				'key'		=> 'auction_ends',
+				'compare'	=> '>=',
+				'type'		=> 'NUMERIC',
+				'value'		=> $today,
+			),
 		),
-		// if no end date has been set use start date
-		array(
-			'key'		=> 'auction_ends',
-			'compare'	=> '<=',
-			'type'		=> 'numeric',
-			'value'		=> $today,
-		)
+		'meta_key'          => 'auction_ends',
+		'orderby'           => 'meta_value',
+		'order'             => 'ASC'
 	);
 	$current_auctions = new WP_Query( $args );
 
@@ -344,14 +351,133 @@ function display_current_auctions() {
 	if ( $current_auctions->have_posts() ) :
 		while ( $current_auctions->have_posts() ) :
 			$current_auctions->the_post();
-			$output .= '<div class="auction_listing">';
-			$output .= get_the_title();
-			$output .= '</div>';
+
+			$auction_ends_day = get_field( 'auction_ends' );
+			$auction_ends_time = get_field( 'starting_at' );
+			$inspection_days_code = '';
+			$move_out_days_code = '';
+
+			if( has_post_thumbnail() ) {
+				$featuredimage = get_the_post_thumbnail_url( get_the_ID(), 'full' );
+			} else {
+				$featuredimage = get_stylesheet_directory_uri() . '/assets/images/sign-header.jpg';
+			}
+
+			if ( have_rows( 'inspection_days' ) ) :
+				$inspection_days_code = '<ul>';
+				while ( have_rows( 'inspection_days' ) ) : the_row();
+					$inspection_days_code .= '<li>' . get_sub_field( 'day' ) . ': ' . get_sub_field( 'times' ) . '</li>';
+				endwhile;
+				$inspection_days_code .= '</ul>';
+			endif;
+
+			if ( have_rows( 'move_out_days' ) ) :
+				$move_out_days_code = '<ul>';
+				while ( have_rows( 'move_out_days' ) ) : the_row();
+					$move_out_days_code .= '<li>' . get_sub_field( 'day' ) . ': ' . get_sub_field( 'times' ) . '</li>';
+				endwhile;
+				$move_out_days_code .= '</ul>';
+			endif;
+
+
+			$output .= sprintf(
+				'
+				<article class="auction_listing">
+					<header class="auction_listing_header">
+						<h3><a href="%s">%s</a></h3>
+					</header>
+					<main class="auction_listing_main">
+						<div class="auction_dates">
+							<div class="auction_end">
+								<h6>Auction ends:</h6>
+								<p>%s<br />Starting at %s</p>
+							</div>
+							<div class="inspection_dates">
+								<h6>Inspection:</h6>
+								%s
+							</div>
+							<div class="move_out_dates">
+								<h6>Move out:</h6>
+								%s
+							</div>
+						</div>
+						<div class="featured_image_container">
+							<a href="%s"><img src="%s"></a>
+						</div>
+					</main>
+				</article>
+				',
+				get_the_permalink(),
+				get_the_title(),
+				esc_html( $auction_ends_day ),
+				esc_html( $auction_ends_time ),
+				wp_kses_post( $inspection_days_code ),
+				wp_kses_post( $move_out_days_code ),
+				get_the_permalink(),
+				esc_url( $featuredimage )
+			);
+
+
 		endwhile;
 	endif;
 
 
 	$output .='</section>';
 
+	return $output;
+}
+
+/**
+ *  helper function for displaying the list of past auctions
+ *
+ * @return string
+ */
+
+function display_past_auctions() {
+	global $post;
+
+	date_default_timezone_set('America/Chicago');
+	$today = date('Ymd', strtotime("now"));
+	$args = array(
+		'post_type' => 'auction',
+		'post_status' => 'publish',
+		'posts_per_page' => '999',
+		'meta_query' => array(
+			'relation'	=> 'AND',
+			// move out days
+			array(
+				'key'		=> 'move_out_days_$_day',
+				'compare'	=> '<',
+				'type'		=> 'NUMERIC',
+				'value'		=> $today,
+			),
+		),
+		'meta_key'          => 'auction_ends',
+		'orderby'           => 'meta_value',
+		'order'             => 'DESC'
+	);
+	$past_auctions = new WP_Query( $args );
+
+	$output ='<section class="auctions_list past_auctions"><h2 class="section_title">Past Auctions</h2>';
+	if ( $past_auctions->have_posts() ) :
+		while ( $past_auctions->have_posts() ) :
+			$past_auctions->the_post();
+
+			$auction_ends_day = get_field( 'auction_ends' );
+
+			$output .= sprintf(
+					'
+					<article class="auction_listing">
+						<a href="%s">%s</a> <span>(Ended %s)</span>
+					</article>
+				',
+				get_the_permalink(),
+				get_the_title(),
+				esc_html( $auction_ends_day )
+			);
+
+		endwhile;
+	endif;
+	$output .='</section>';
 	return $output;
 }
