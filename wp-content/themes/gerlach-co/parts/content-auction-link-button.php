@@ -10,7 +10,7 @@ if( $auction_link ) :
 
 	foreach( $moveout_days_and_times_array as $day ) :
 		$day_unformatted = (int) $day['field_653f7e980a226'];
-		$this_week = ( $today + 07 );
+		//$this_week = ( $today + 07 );
 
 		if ( $this_week > $day_unformatted ) {
 			$button_disabled = true;
