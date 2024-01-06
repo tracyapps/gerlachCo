@@ -8,12 +8,6 @@ all of your Sass files so they can compile into one
 CSS file. 
 
 ******************************************************************/
-/*
-* Scut, a collection of Sass utilities
-* to ease and improve our implementations of common style-code patterns.
-* v1.4.4
-* Docs at http://ramseyinhouse.github.io/scut
-*/
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:wght@300;700&family=Dancing+Script:wght@700&display=swap");
 .assistive-text,
 .visuallyhidden,
@@ -271,6 +265,7 @@ blockquote:before {
   display: none;
 }
 
+.primary_button,
 .wp-block-button__link,
 .button,
 a.button,
@@ -280,8 +275,19 @@ a.wp-block-button__link {
   transition: all 200ms ease-in-out;
   background: var(--button--background_color);
   color: var(--button--text_color);
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  display: inline-block;
+  border-radius: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
 }
-.wp-block-button__link:hover, .wp-block-button__link:focus, .wp-block-button__link:visited:hover,
+.primary_button:hover, .primary_button:focus, .primary_button:visited:hover,
+.wp-block-button__link:hover,
+.wp-block-button__link:focus,
+.wp-block-button__link:visited:hover,
 .button:hover,
 .button:focus,
 .button:visited:hover,
@@ -300,6 +306,7 @@ a.wp-block-button__link:visited:hover {
   background: var(--button_hover--background_color);
   color: var(--button_hover--text_color);
 }
+.primary_button.full,
 .wp-block-button__link.full,
 .button.full,
 a.button.full,
@@ -309,6 +316,27 @@ a.wp-block-button__link.full {
   display: block;
   text-align: center;
 }
+.primary_button.centered,
+.wp-block-button__link.centered,
+.button.centered,
+a.button.centered,
+input[type=submit].centered,
+button.centered,
+a.wp-block-button__link.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+.primary_button.disabled,
+.wp-block-button__link.disabled,
+.button.disabled,
+a.button.disabled,
+input[type=submit].disabled,
+button.disabled,
+a.wp-block-button__link.disabled {
+  cursor: not-allowed;
+  background: #727A8F;
+}
+.primary_button.text_link,
 .wp-block-button__link.text_link,
 .button.text_link,
 a.button.text_link,
@@ -318,7 +346,10 @@ a.wp-block-button__link.text_link {
   background: none;
   color: var(--body--link_color);
 }
-.wp-block-button__link.text_link:hover, .wp-block-button__link.text_link:focus, .wp-block-button__link.text_link:active,
+.primary_button.text_link:hover, .primary_button.text_link:focus, .primary_button.text_link:active,
+.wp-block-button__link.text_link:hover,
+.wp-block-button__link.text_link:focus,
+.wp-block-button__link.text_link:active,
 .button.text_link:hover,
 .button.text_link:focus,
 .button.text_link:active,
@@ -336,6 +367,7 @@ a.wp-block-button__link.text_link:focus,
 a.wp-block-button__link.text_link:active {
   color: var(--body--link_color_hover);
 }
+.is-style-outline .primary_button,
 .is-style-outline .wp-block-button__link,
 .is-style-outline .button,
 .is-style-outline a.button,
@@ -345,7 +377,10 @@ a.wp-block-button__link.text_link:active {
   border-color: var(--button--background_color);
   color: var(--button--background_color);
 }
-.is-style-outline .wp-block-button__link:hover, .is-style-outline .wp-block-button__link:focus, .is-style-outline .wp-block-button__link:visited:hover,
+.is-style-outline .primary_button:hover, .is-style-outline .primary_button:focus, .is-style-outline .primary_button:visited:hover,
+.is-style-outline .wp-block-button__link:hover,
+.is-style-outline .wp-block-button__link:focus,
+.is-style-outline .wp-block-button__link:visited:hover,
 .is-style-outline .button:hover,
 .is-style-outline .button:focus,
 .is-style-outline .button:visited:hover,
@@ -390,18 +425,22 @@ h6 {
   margin-bottom: 0.3em;
   line-height: 1.1;
   font-family: var(--typography-header_text);
+  width: 90%;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
 
-p {
+p,
+address {
+  width: 90%;
   max-width: 100ch;
   margin-left: auto;
   margin-right: auto;
 }
 
 li {
+  width: 90%;
   max-width: 100ch;
   margin-left: auto;
   margin-right: auto;
@@ -1221,7 +1260,8 @@ footer.site-footer p {
   margin: 2em auto 4em auto;
   border: 2px solid transparent;
   transition: all 200ms ease-in-out;
-  max-width: 90%;
+  width: 95%;
+  max-width: 100ch;
 }
 
 .page_featured_image_container {
@@ -1413,7 +1453,7 @@ span.pulled-left {
 }
 .auction_listing h3 {
   font-weight: 400;
-  margin: 0;
+  margin-top: 0;
   padding: 0;
   display: block;
 }
@@ -1451,26 +1491,42 @@ span.pulled-left {
   background: var(--brand_color-red);
   color: var(--brand_color-white);
 }
+@media (max-width: 900px) {
+  .auction_detail_page .auction_dates {
+    flex-wrap: wrap;
+  }
+  .auction_detail_page .auction_dates > * {
+    border-bottom: 1px solid var(--brand_color-silver);
+  }
+}
 .auction_detail_page .auction_dates > * {
   flex: 1;
   padding: 2rem 3rem 4rem 3rem;
   border-right: 1px solid var(--brand_color-silver);
 }
 .auction_detail_page .auction_dates > * h4 {
-  margin: 0;
-  padding: 0;
+  margin: 0 0 0.4em 0;
+  padding: 0 0 5px 0;
+  line-height: 1;
+  border-bottom: 1px solid rgba(89, 15, 17, 0.4);
+  font-size: var(--typography-h5_size);
+}
+@media (max-width: 600px) {
+  .auction_detail_page .auction_dates > * h4 {
+    font-size: calc(var(--typography-h5_size) * 0.8);
+  }
 }
 .auction_detail_page .auction_location {
   border-bottom: 2px solid var(--brand_color-silver);
 }
 .auction_detail_page .auction_location h4 {
-  margin: 0;
+  margin-top: 0;
   padding: 2rem;
   border-bottom: 2px solid var(--brand_color-red);
 }
 .auction_detail_page .auction_location h6,
 .auction_detail_page .auction_location address {
-  margin: 0.75em 0;
+  margin: 0.75em auto;
 }
 .auction_detail_page .auction_location .google_map_embed {
   width: 100%;

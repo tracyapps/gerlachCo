@@ -3,6 +3,23 @@
     "title": "Auction Details",
     "fields": [
         {
+            "key": "field_6599a5a8130e5",
+            "label": "Link to online auction page",
+            "name": "auction_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Paste the URL for the online auction. Be sure to include the \"https:\/\/\" at the beginning.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/proxibid.com\/..."
+        },
+        {
             "key": "field_653f7fc42c6b4",
             "label": "Dates",
             "name": "",
@@ -525,5 +542,5 @@
     "acfe_note": "",
     "acfcdt_manage_table_definition": 0,
     "acfcdt_table_definition_file_name": "table_93x653f7bcd9b017",
-    "modified": 1700455338
+    "modified": 1704568375
 }

@@ -22,7 +22,7 @@
 
 	h3 {
 		font-weight: 400;
-		margin: 0;
+		margin-top: 0;
 		padding: 0;
 		display: block;
 
@@ -70,14 +70,28 @@
 		background: var( --brand_color-red );
 		color: var( --brand_color-white );
 
+		@include tablet-down {
+			flex-wrap: wrap;
+			> * {
+				border-bottom: 1px solid var( --brand_color-silver );
+			}
+		}
+
 		> * {
 			flex: 1;
 			padding: 2rem 3rem 4rem 3rem;
 			border-right: 1px solid var( --brand_color-silver );
 
 			h4 {
-				margin: 0;
-				padding: 0;
+				margin: 0 0 0.4em 0;
+				padding: 0 0 5px 0;
+				line-height: 1;
+				border-bottom: 1px solid rgba( $maroon, 0.4 );
+				font-size: var(--typography-h5_size);
+
+				@include phone-only {
+					font-size: calc( var(--typography-h5_size) * .8 );
+				}
 			}
 		}
 	}
@@ -87,13 +101,13 @@
 		border-bottom: 2px solid var( --brand_color-silver );
 
 		h4 {
-			margin: 0;
+			margin-top: 0;
 			padding: 2rem;
 			border-bottom: 2px solid var( --brand_color-red );
 		}
 		h6,
 		address {
-			margin: 0.75em 0;
+			margin: 0.75em auto;
 		}
 
 		.google_map_embed {

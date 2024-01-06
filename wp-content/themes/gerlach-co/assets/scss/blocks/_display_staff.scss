@@ -38,6 +38,7 @@
 		margin: 2em auto 4em auto;
 		border: 2px solid transparent;
 		transition: all 200ms ease-in-out;
-		max-width: 90%;
+		width: 95%;
+		max-width: $max-text-line-width;
 	}
 }

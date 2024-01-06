@@ -91,7 +91,7 @@ blockquote {
 }
 
 
-
+.primary_button,
 .wp-block-button__link,
 .button,
 a.button,
@@ -102,6 +102,15 @@ a.wp-block-button__link {
 	transition: all $button-transition-speed ease-in-out;
 	background: var(--button--background_color);
 	color: var(--button--text_color);
+	padding: 1em;
+	margin-top: 1em;
+	margin-bottom: 2em;
+	display: inline-block;
+	border-radius: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+
 
 	&:hover,
 	&:focus,
@@ -115,6 +124,16 @@ a.wp-block-button__link {
 	&.full {
 		display: block;
 		text-align: center;
+	}
+
+	&.centered {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&.disabled {
+		cursor: not-allowed;
+		background: $slate;
 	}
 
 
@@ -175,18 +194,22 @@ h6 {
 	margin-bottom: 0.3em;
 	line-height: 1.1;
 	font-family: var(--typography-header_text);
+	width: 90%;
 	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-p {
+p,
+address{
+	width: 90%;
 	max-width: $max-text-line-width;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 li {
+	width: 90%;
 	max-width: $max-text-line-width;
 	margin-left: auto;
 	margin-right: auto;

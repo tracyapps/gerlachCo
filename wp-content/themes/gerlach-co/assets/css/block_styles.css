@@ -1,9 +1,3 @@
-/*
-* Scut, a collection of Sass utilities
-* to ease and improve our implementations of common style-code patterns.
-* v1.4.4
-* Docs at http://ramseyinhouse.github.io/scut
-*/
 .assistive-text,
 .visuallyhidden,
 .screen-reader-text {
@@ -190,5 +184,160 @@
 
 .has-tan-to-slate-gradient-background {
   background-image: linear-gradient(135deg, var(--brand_color-tan) 75%, var(--brand_color-slate) 100%);
+}
+
+body .block-display-auction .auction_listing {
+  padding: 1em;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+body .block-display-auction .auction_listing h5 {
+  margin-top: 0;
+}
+body .block-display-auction .auction_listing .featured_image_container img {
+  margin: 0 -1em;
+  width: calc(100% + 2em);
+  max-width: none;
+}
+body .block-display-auction.style-plain {
+  width: 95vw;
+  max-width: 100ch;
+  margin: 2em auto;
+}
+body .block-display-auction.style-plain .auction_listing {
+  box-shadow: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+body .block-display-auction.style-plain .auction_listing header {
+  flex: none;
+  width: 100%;
+}
+body .block-display-auction.style-plain .auction_listing .featured_image_container {
+  max-width: 35%;
+  height: auto;
+}
+body .block-display-auction.style-plain .auction_listing .featured_image_container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+body .block-display-auction.style-plain .auction_listing .auction_details {
+  flex: 1;
+}
+body .block-display-auction.style-plain .auction_listing .auction_details .auction_dates {
+  background: none;
+  color: #303030;
+}
+body .block-display-auction.style-list .list_container {
+  width: 95vw;
+  max-width: 100ch;
+  margin: 2em auto;
+}
+body .block-display-auction.style-list .auction_details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.73);
+}
+body .block-display-auction.style-list .auction_details .auction_dates {
+  display: flex;
+}
+body .block-display-auction.style-list .auction_details .auction_dates > div {
+  padding: 0.5em 1em;
+  flex: 1;
+}
+body .block-display-auction.style-list .auction_details .auction_dates h6 {
+  margin-top: 0;
+}
+body .block-display-auction.style-list .auction_details .auction_dates ul,
+body .block-display-auction.style-list .auction_details .auction_dates li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body .block-display-auction.style-grid .grid_container {
+  width: 98vw;
+  margin: 2em auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+  grid-gap: 1rem;
+}
+body .block-display-auction.style-grid .auction_listing {
+  border: 2px solid transparent;
+  transition: all 200ms ease-in-out;
+}
+body .block-display-auction.style-grid .auction_listing:hover, body .block-display-auction.style-grid .auction_listing:target, body .block-display-auction.style-grid .auction_listing:focus {
+  border: 2px solid #BF2026;
+  box-shadow: 1px 1px 23px rgba(0, 0, 0, 0.46);
+}
+body .block-display-auction.style-grid .auction_details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.73);
+  font-size: 80%;
+}
+body .block-display-auction.style-grid .auction_details .auction_dates {
+  display: flex;
+}
+body .block-display-auction.style-grid .auction_details .auction_dates > div {
+  padding: 0.5em 1em;
+  flex: 1;
+}
+body .block-display-auction.style-grid .auction_details .auction_dates h6 {
+  margin-top: 0;
+}
+body .block-display-auction.style-grid .auction_details .auction_dates ul,
+body .block-display-auction.style-grid .auction_details .auction_dates li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body .block-display-staff {
+  margin: 1em auto 3em auto;
+  display: flex;
+  align-items: center;
+}
+body .block-display-staff .person_headshot_container {
+  max-width: 30%;
+  margin: 1em;
+}
+body .block-display-staff .person_bio_container {
+  flex: 1;
+  padding: 1em;
+}
+body .block-display-staff .person_bio_container h5 {
+  margin-top: 0;
+  padding: 0 1rem;
+  display: block;
+  border-bottom: 2px solid #BF2026;
+}
+body .block-display-staff .person_bio_container h5 span.job_title {
+  font-size: 50%;
+  color: #590F11;
+}
+body .block-display-staff .person_bio_container p {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+body .block-display-staff.style-card {
+  background: var(--brand_color-white);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 18px rgba(0, 0, 0, 0.16);
+  margin: 2em auto 4em auto;
+  border: 2px solid transparent;
+  transition: all 200ms ease-in-out;
+  width: 95%;
+  max-width: 100ch;
 }
 /*# sourceMappingURL=block_styles.css.map */

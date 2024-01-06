@@ -76,7 +76,11 @@
 							<?php // No rows found ?>
 						<?php endif; ?>
 					</section>
-
+					<section class="online_auction_button centered-text">
+						<?php
+						get_template_part( 'parts/content-auction-link-button' );
+						?>
+					</section>
 					<section class="full_content_section">
 						<?php the_content(); ?>
 					</section>
@@ -88,6 +92,10 @@
 			</main> <!-- end #main -->
 
 			<aside class="sidebar secondary-column" role="complementary">
+
+				<?php
+				get_template_part( 'parts/content-auction-link-button' );
+				?>
 
 				<?php if ( have_rows( 'item_groups' ) ) : ?>
 					<?php while ( have_rows( 'item_groups' ) ) : the_row(); ?>
