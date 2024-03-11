@@ -53,7 +53,7 @@
 
 		h1 {
 			margin: 0;
-			padding: 0 1em;
+			padding: 0 0 0 10px;
 		}
 
 		svg {
@@ -148,6 +148,7 @@
 		align-items: baseline;
 		font-weight: 600;
 		text-transform: uppercase;
+		font-size: 85%;
 
 		@include tablet-up {
 			margin-top: 4em;
@@ -193,10 +194,10 @@
 		}
 		ul.menu {
 			margin-top: 0;
-			padding: 1em 0 0 2rem;
+			padding: 1em 0 0 0.5rem;
 			display: flex;
 			align-items: center;
-			justify-content: flex-end;
+			justify-content: space-evenly;
 			flex: 1;
 			//overflow: hidden;
 			transition: all $button-transition-speed ease-in-out;
@@ -205,7 +206,8 @@
 			li {
 				list-style-type: none;
 				margin: 0 1px 0 0;
-				padding: 0;
+				padding: 0 2px;
+				width: auto;
 
 
 				&.menu-item-has-children {
@@ -257,6 +259,7 @@
 				padding: 0;
 				margin-bottom: 1px;
 				background-color: var(--smaller_header--background_color);
+				width: auto;
 			}
 
 			&.hidden {
@@ -278,13 +281,14 @@
 		a,
 		a:visited {
 			display: block;
-			padding: 0.5em 1.05em;
+			padding: 0.5em 10px;
 			text-decoration: none;
 			transition: all $button-transition-speed ease-in-out;
-			text-align: left;
+			text-align: center;
 			color: var( --nav_item--text_color );
 			border-top: 5px solid transparent;
 			border-bottom: 5px solid transparent;
+			white-space: nowrap;
 
 			&:hover,
 			&:focus,

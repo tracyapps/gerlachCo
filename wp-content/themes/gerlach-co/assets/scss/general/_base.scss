@@ -24,6 +24,7 @@ body {
 	-webkit-tap-highlight-color: #ff0;
 	background-color: var(--body--background_color);
 	color: var(--body--text_color);
+	max-width: 100vw;
 
 	@include phone-only {
 		//		font-size: calc( var(--typography-body_text) * .9 );
@@ -181,6 +182,9 @@ a.wp-block-button__link {
 	}
 }
 
+.rounded_corners {
+	border-radius: 8px;
+}
 
 
 // ---------------- 03. Typography

@@ -11,20 +11,29 @@
 		}
 	}
 }
-
-#inner-content {
-	display: flex;
-
-	> * {
-		flex: 1;
+@include tablet-down {
+	.secondary-column {
+		margin-top: 4em;
 	}
+}
 
-	> .main-column {
-		min-width: $golden-large;
-		padding: 2rem;
-	}
 
-	> .secondary-column {
 
+@include tablet-up{
+	#inner-content {
+		display: flex;
+
+		> * {
+			flex: 1;
+		}
+
+		> .main-column {
+			min-width: $golden-large;
+			padding: 2rem;
+		}
+
+		> .secondary-column {
+
+		}
 	}
 }

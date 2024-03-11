@@ -35,11 +35,15 @@ h2.page_title {
 	text-align: center;
 	color: var(--page_header--page_title);
 	padding: 0.65em 10px 0.15em 10px;
-
+	@include phone-only {
+		font-size: var(--typography-h2_size);
+	}
 	.no-featured-image & {
 		padding-top: 4em;
 		color: var(--body--text_color);
 	}
+
+
 }
 
 .page_tagline {
