@@ -1133,7 +1133,7 @@ footer.site-footer .social-links li span {
 footer.site-footer .social-links li a,
 footer.site-footer .social-links li a:visited {
   text-decoration: none;
-  filter: brightness(10);
+  filter: brightness(50);
   opacity: 0.75;
 }
 footer.site-footer .social-links li a:hover,
