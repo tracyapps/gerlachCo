@@ -8,7 +8,7 @@ all of your Sass files so they can compile into one
 CSS file. 
 
 ******************************************************************/
-@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:wght@300;700&family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 .assistive-text,
 .visuallyhidden,
 .screen-reader-text {
@@ -732,6 +732,11 @@ input[aria-invalid=true] {
 .site-header .site-logo {
   color: var(--header--nav_text_color);
 }
+@media (max-width: 600px) {
+  .site-header .site-logo {
+    width: 100%;
+  }
+}
 .site-header .site-logo a {
   color: currentColor;
   text-decoration: none;
@@ -839,26 +844,34 @@ input[aria-invalid=true] {
   border: 0;
   font-size: 0.9rem;
 }
+@media (max-width: 600px) {
+  .site-header .main-navigation button {
+    font-size: 1em;
+    padding: 0.5em 0.75em;
+  }
+}
 .site-header .main-navigation button.hidden {
   transition: none;
   width: 0;
   padding: 0;
   overflow: hidden;
 }
-.site-header .main-navigation button:after {
-  content: attr(count);
-  display: inline-flex;
-  width: 20px;
-  height: 20px;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--nav_item_hover--background_color);
-  color: var(--nav_item_hover--text_color);
-  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.9);
-  border-radius: 50%;
-  font-size: 11px;
-  line-height: 11px;
-  margin: 0 -0.25em 0 0.4em;
+@media (min-width: 600px) {
+  .site-header .main-navigation button:after {
+    content: attr(count);
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--nav_item_hover--background_color);
+    color: var(--nav_item_hover--text_color);
+    box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.9);
+    border-radius: 50%;
+    font-size: 11px;
+    line-height: 11px;
+    margin: 0 -0.25em 0 0.4em;
+  }
 }
 .site-header .main-navigation ul.menu {
   margin-top: 0;

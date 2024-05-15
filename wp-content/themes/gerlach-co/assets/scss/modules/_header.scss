@@ -39,6 +39,10 @@
 	.site-logo {
 		color: var(--header--nav_text_color);
 
+		@include phone-only {
+			width: 100%;
+		}
+
 		a {
 			color: currentColor;
 			text-decoration: none;
@@ -165,6 +169,11 @@
 			border: 0;
 			font-size: 0.9rem;
 
+			@include phone-only {
+				font-size: 1em;
+				padding: 0.5em 0.75em;
+			}
+
 			&.hidden {
 				transition: none;
 				width: 0;
@@ -172,25 +181,29 @@
 				overflow: hidden;
 			}
 
-			&:after {
-				content: attr(count);
-				display: inline-flex;
-				width: 20px;
-				height: 20px;
-				align-items: center;
-				justify-content: center;
-				background-color: var(--nav_item_hover--background_color);
-				color: var(--nav_item_hover--text_color);
-				box-shadow: -1px 0 2px 0 rgba(0,0,0,0.9);
-				border-radius: 50%;
-				font-size: 11px;
-				line-height: 11px;
-				//margin: -0.25rem 0 0 0.3rem;
-				margin: 0 -0.25em 0 0.4em;
-				//margin-right: -5em;
-				//margin-right: calc(-1rem + -8px);
+			@include not-phone {
+				&:after {
+					content: attr(count);
+					display: inline-flex;
+					width: 20px;
+					height: 20px;
+					align-items: center;
+					justify-content: center;
+					background-color: var(--nav_item_hover--background_color);
+					color: var(--nav_item_hover--text_color);
+					box-shadow: -1px 0 2px 0 rgba(0,0,0,0.9);
+					border-radius: 50%;
+					font-size: 11px;
+					line-height: 11px;
+					//margin: -0.25rem 0 0 0.3rem;
+					margin: 0 -0.25em 0 0.4em;
+					//margin-right: -5em;
+					//margin-right: calc(-1rem + -8px);
 
+				}
 			}
+
+
 		}
 		ul.menu {
 			margin-top: 0;

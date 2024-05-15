@@ -45,7 +45,7 @@ jQuery(document).ready( function($) {
 		// There is not enough space
 		if (requiredSpace > availableSpace) {
 			$vlinks.children().last().prependTo($hlinks);
-			numOfVisibleItems -= 1;
+			numOfVisibleItems -= 2;
 			check();
 			// There is more than enough space
 		} else if (availableSpace > breakWidths[numOfVisibleItems]) {

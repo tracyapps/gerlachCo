@@ -68,6 +68,11 @@
 		@content;
 	}
 }
+@mixin not-phone {
+	@include breakpoint($not-phone) {
+		@content;
+	}
+}
 
 @mixin tablet-only {
 	@include breakpoint($tablet) {

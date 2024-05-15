@@ -52,6 +52,7 @@ $breakpoint-x-large: 1800px;
 
 // Breakpoint groupings by devices (used by the mixins in _utilities)
 $phone:                max-width $breakpoint-small;
+$not-phone:            min-width $breakpoint-small;
 $phone-landscape:      ($breakpoint-small $breakpoint-medium) (orientation landscape);
 $tablet:               $breakpoint-small $breakpoint-large;
 $tablet-landscape:     ($breakpoint-medium $breakpoint-large) (orientation landscape);
@@ -68,3 +69,8 @@ $tablet-landscape-up:  $breakpoint-medium;
 $border-radius: 			3em;
 $button-transition-speed: 	200ms;
 $default-button-padding:	1.25rem 4rem;
+
+
+// ----------------- 04. Typography
+
+$nunito : 'Nunito Sans', sans-serif;
