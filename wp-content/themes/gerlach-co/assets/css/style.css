@@ -1059,8 +1059,6 @@ footer.site-footer svg .shadow_color {
 footer.site-footer a,
 footer.site-footer a:visited {
   color: var(--footer--link_color);
-  text-decoration: none;
-  text-transform: uppercase;
 }
 footer.site-footer a:hover,
 footer.site-footer a:visited:hover {
@@ -1129,6 +1127,8 @@ footer.site-footer nav ul li {
 footer.site-footer nav a {
   padding: 0.75em 1em;
   display: block;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 footer.site-footer .social-links {
   margin: 0;
